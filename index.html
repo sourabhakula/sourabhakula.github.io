@@ -376,8 +376,13 @@ nav.scrolled { box-shadow: var(--sh-sm); }
 ═══════════════════════════════════════════════ */
 .dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
 .dash-card {
-  border: 1px solid var(--border); border-radius: var(--r-lg);
-  overflow: hidden; cursor: pointer;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  cursor: pointer;
   transition: box-shadow .25s, transform .25s;
 }
 .dash-card:hover { box-shadow: var(--sh-lg); transform: translateY(-4px); }
@@ -1050,7 +1055,9 @@ ORDER BY take_rate ASC;</code>
   </div>
   <div class="dash-grid">
 
-    <div class="dash-card reveal">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9"
+target="_blank"
+class="dash-card reveal">
       <div class="dash-preview" style="background:#0d0c0b;">
         <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/Uber%20CEO.png"
              alt="NYC Ride-Hailing: Uber CEO Dashboard"
@@ -1060,9 +1067,11 @@ ORDER BY take_rate ASC;</code>
         <h4>NYC Ride-Hailing: Uber CEO View</h4>
         <p>Platform margin, take rate by decile, TLC violations · Power BI</p>
       </div>
-    </div>
+    </a>
 
-    <div class="dash-card reveal d1">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9"
+target="_blank"
+class="dash-card reveal">
       <div class="dash-preview" style="background:#0d0c0b;">
         <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/Lyft%20CEO.png"
              alt="NYC Ride-Hailing: Lyft CEO Dashboard"
@@ -1072,9 +1081,11 @@ ORDER BY take_rate ASC;</code>
         <h4>NYC Ride-Hailing: Lyft CEO View</h4>
         <p>Competitive heatmap, price decomposition, zone action matrix · Power BI</p>
       </div>
-    </div>
+    </a>
 
-    <div class="dash-card reveal d2">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9"
+target="_blank"
+class="dash-card reveal">
       <div class="dash-preview" style="background:#0d0c0b;">
         <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/NYC%20TLC.png"
              alt="NYC Ride-Hailing: TLC Commissioner Dashboard"
@@ -1084,9 +1095,11 @@ ORDER BY take_rate ASC;</code>
         <h4>NYC Ride-Hailing: TLC Commissioner View</h4>
         <p>Enforcement priority, congestion regressivity, violation rate · Power BI</p>
       </div>
-    </div>
+    </a>
 
-    <div class="dash-card reveal d3">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9"
+target="_blank"
+class="dash-card reveal">
       <div class="dash-preview" style="background:#0d0c0b;">
         <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/New%20Entrant.png"
              alt="NYC Ride-Hailing: New Market Entrant Dashboard"
@@ -1096,7 +1109,7 @@ ORDER BY take_rate ASC;</code>
         <h4>NYC Ride-Hailing: New Entrant View</h4>
         <p>Opportunity score matrix, WAV gap, airport paradox · Power BI</p>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
@@ -1397,3 +1410,4 @@ function submitForm(e) {
 </body>
 
 </html>
+
