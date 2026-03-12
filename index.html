@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sourabh Akula – Business Data Analyst Portfolio</title>
+<meta name="description" content="Business Data Analyst specializing in SQL, Power BI, and business analytics. Portfolio projects include ride-hailing strategy analysis, machine learning models, and fraud detection analytics. Based in Dallas, TX.">
+<meta name="keywords" content="Business Data Analyst, SQL, Power BI, Python, Data Analytics, Dallas TX, Sourabh Akula">
+<meta property="og:title" content="Sourabh Akula – Business Data Analyst Portfolio">
+<meta property="og:description" content="Business Data Analyst specializing in SQL, Power BI, and business analytics. 5 years of experience across fraud detection, BI, and operational analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  --white:    #ffffff;
+  --off:      #f7f6f3;
+  --off2:     #f0ede7;
+  --border:   #e5e2db;
+  --mid:      #8f8b84;
+  --dark:     #1c1b19;
+  --black:    #0d0c0b;
+  --tag-bg:   #eeebe4;
+  --tag-txt:  #5c5850;
+  --green:    #22c55e;
+  --r:        8px;
+  --r-lg:     14px;
+  --sh-sm:    0 1px 4px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --sh-md:    0 4px 16px rgba(0,0,0,0.08), 0 8px 24px rgba(0,0,0,0.05);
+  --sh-lg:    0 12px 40px rgba(0,0,0,0.11), 0 24px 64px rgba(0,0,0,0.06);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET
+═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--white); color: var(--black);
+  font-weight: 400; line-height: 1.6;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 200;
+  height: 60px; padding: 0 2.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow .3s;
+}
+nav.scrolled { box-shadow: var(--sh-sm); }
+.nav-logo { font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
+.nav-logo sup { font-size: .5rem; color: var(--mid); vertical-align: super; font-weight: 700; }
+.nav-links { display: flex; gap: .15rem; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: .78rem; font-weight: 700; letter-spacing: .02em;
+  color: var(--mid); padding: .35rem .8rem; border-radius: 6px;
+  transition: background .18s, color .18s;
+}
+.nav-links a:hover { background: var(--off); color: var(--black); }
+.nav-hire {
+  background: var(--black) !important; color: var(--white) !important;
+  border-radius: var(--r) !important; padding: .4rem 1rem !important;
+  transition: transform .2s, box-shadow .2s !important;
+}
+.nav-hire:hover { transform: translateY(-1px) !important; box-shadow: var(--sh-md) !important; }
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+.hero {
+  padding-top: 60px; min-height: 100vh;
+  display: flex; flex-direction: column;
+  background: var(--white); overflow: hidden; position: relative;
+}
+.hero-band {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 2rem 2.5rem 0;
+}
+.hero-band-left {
+  font-size: .72rem; font-weight: 700; color: var(--mid);
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.hero-status {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .75rem; font-weight: 700; color: var(--mid);
+  background: var(--off); border: 1px solid var(--border);
+  border-radius: 100px; padding: .3rem .9rem;
+}
+.status-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 0 3px rgba(34,197,94,.18);
+  animation: gpulse 2.2s ease-in-out infinite;
+}
+@keyframes gpulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(34,197,94,.18); }
+  50%      { box-shadow: 0 0 0 7px rgba(34,197,94,.05); }
+}
+
+/* Giant editorial name */
+.hero-name-block { padding: 1.2rem 2.5rem 0; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.hero-name {
+  font-size: clamp(4.5rem, 12vw, 12rem);
+  font-weight: 900; line-height: .9; letter-spacing: -.04em; color: var(--black);
+}
+.hero-name-dim { color: #ccc; }
+
+/* pronunciation pill */
+.pronun {
+  display: inline-flex; align-items: center; gap: .35rem;
+  margin-left: .8rem; vertical-align: middle;
+  font-size: .72rem; font-weight: 700; color: var(--mid);
+  letter-spacing: .03em; border: 1px solid var(--border);
+  border-radius: 100px; padding: .22rem .65rem;
+  position: relative; cursor: help;
+  transition: border-color .2s, color .2s;
+}
+.pronun:hover { border-color: var(--black); color: var(--black); }
+.pronun-tip {
+  position: absolute; bottom: calc(100% + 9px); left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: var(--black); color: var(--white);
+  font-size: .7rem; font-weight: 500; letter-spacing: .03em;
+  padding: .4rem .8rem; border-radius: 6px;
+  white-space: nowrap; opacity: 0; pointer-events: none;
+  transition: opacity .2s, transform .2s;
+}
+.pronun-tip::after {
+  content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 4px solid transparent; border-top-color: var(--black);
+}
+.pronun:hover .pronun-tip { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.hero-rule { height: 1px; background: var(--border); margin: 0 2.5rem; }
+.hero-footer {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding: 1.8rem 2.5rem 2.8rem; gap: 2rem; flex-wrap: wrap;
+}
+.hero-meta { display: flex; flex-direction: column; gap: .4rem; }
+.hero-title { font-size: .95rem; font-weight: 800; color: var(--black); letter-spacing: -.01em; }
+.hero-chips { display: flex; gap: .4rem; flex-wrap: wrap; margin-top: .2rem; }
+.hero-chip {
+  font-size: .65rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase;
+  background: var(--tag-bg); color: var(--tag-txt); padding: .22rem .65rem;
+  border-radius: 100px; border: 1px solid var(--border);
+}
+.hero-exp { font-size: .75rem; font-weight: 700; color: var(--mid); margin-top: .25rem; }
+.hero-tagline { font-size: .9rem; color: var(--mid); max-width: 300px; line-height: 1.65; margin-top: .4rem; }
+.hero-btns { display: flex; gap: .65rem; align-items: center; flex-shrink: 0; }
+.btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .72rem 1.5rem; border-radius: var(--r);
+  font-family: 'Nunito', sans-serif;
+  font-size: .82rem; font-weight: 800; letter-spacing: .02em;
+  cursor: pointer; border: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-black { background: var(--black); color: var(--white); }
+.btn-black:hover { box-shadow: var(--sh-md); }
+.btn-ghost { background: var(--white); color: var(--black); border: 1.5px solid var(--border); }
+.btn-ghost:hover { border-color: var(--black); box-shadow: var(--sh-sm); }
+
+/* ═══════════════════════════════════════════════
+   KEY INSIGHT CALLOUT (featured metrics)
+═══════════════════════════════════════════════ */
+.insights-band {
+  background: var(--black); padding: 2.2rem 2.5rem;
+  display: flex; gap: 0; overflow: hidden;
+}
+.insight-item {
+  flex: 1; padding: 0 2rem;
+  border-right: 1px solid rgba(255,255,255,.1);
+  transition: background .2s;
+}
+.insight-item:first-child { padding-left: 0; }
+.insight-item:last-child { border-right: none; }
+.insight-item:hover { background: rgba(255,255,255,.04); }
+.insight-label {
+  font-size: .62rem; font-weight: 800; letter-spacing: .16em;
+  text-transform: uppercase; color: rgba(255,255,255,.35);
+  margin-bottom: .5rem;
+}
+.insight-stat {
+  font-size: 1.6rem; font-weight: 900; color: var(--white);
+  letter-spacing: -.03em; line-height: 1; margin-bottom: .4rem;
+}
+.insight-desc { font-size: .78rem; color: rgba(255,255,255,.45); line-height: 1.5; }
+
+/* ═══════════════════════════════════════════════
+   SECTION BASE
+═══════════════════════════════════════════════ */
+.section { padding: 5.5rem 2.5rem; }
+.section-alt { background: var(--off); }
+.s-tag {
+  font-size: .65rem; font-weight: 800; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--mid); margin-bottom: .6rem;
+}
+.s-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 900; letter-spacing: -.025em; line-height: 1.05; color: var(--black);
+}
+.s-head {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 3rem;
+}
+.s-link {
+  font-size: .76rem; font-weight: 700; color: var(--mid);
+  border-bottom: 1px solid var(--border); padding-bottom: 1px;
+  transition: color .2s, border-color .2s;
+}
+.s-link:hover { color: var(--black); border-color: var(--black); }
+
+/* ═══════════════════════════════════════════════
+   HOW I THINK WITH DATA
+═══════════════════════════════════════════════ */
+.think-steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; margin-bottom: 3rem; border: 1px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden;
+}
+.think-step {
+  padding: 2rem 1.8rem;
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+  transition: background .2s;
+  position: relative;
+}
+.think-step:last-child { border-right: none; }
+.think-step:hover { background: var(--off); }
+.think-step.active { background: var(--black); }
+.think-step-num {
+  font-size: .6rem; font-weight: 800; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--mid); margin-bottom: .7rem;
+  transition: color .2s;
+}
+.think-step.active .think-step-num { color: rgba(255,255,255,.4); }
+.think-step-label {
+  font-size: 1rem; font-weight: 800; color: var(--black);
+  letter-spacing: -.01em; margin-bottom: .4rem;
+  transition: color .2s;
+}
+.think-step.active .think-step-label { color: var(--white); }
+.think-step-short {
+  font-size: .78rem; color: var(--mid); line-height: 1.5;
+  transition: color .2s;
+}
+.think-step.active .think-step-short { color: rgba(255,255,255,.5); }
+.think-step-arrow {
+  position: absolute; right: 1rem; top: 50%;
+  transform: translateY(-50%); font-size: .8rem; color: var(--border);
+  transition: color .2s, transform .2s;
+}
+.think-step:hover .think-step-arrow { color: var(--mid); transform: translateY(-50%) translateX(2px); }
+.think-step.active .think-step-arrow { color: rgba(255,255,255,.3); }
+
+/* expandable example panels */
+.think-panel {
+  display: none; border: 1px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden;
+}
+.think-panel.active { display: grid; grid-template-columns: 1fr 1fr; }
+.think-panel-left {
+  padding: 2.2rem 2.5rem; background: var(--white);
+  border-right: 1px solid var(--border);
+}
+.think-panel-right { padding: 2.2rem 2.5rem; background: var(--off); }
+.think-panel h4 {
+  font-size: .65rem; font-weight: 800; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--mid); margin-bottom: .8rem;
+}
+.think-panel p { font-size: .9rem; color: #444; line-height: 1.75; }
+.think-panel code {
+  display: block; background: var(--black); color: #7dd3fc;
+  font-family: 'Courier New', monospace; font-size: .78rem; line-height: 1.7;
+  padding: 1.2rem 1.4rem; border-radius: var(--r); margin-top: .8rem;
+  overflow-x: auto; white-space: pre;
+}
+
+/* ═══════════════════════════════════════════════
+   PROJECTS
+═══════════════════════════════════════════════ */
+.projects-list { display: flex; flex-direction: column; }
+.proj-row {
+  display: grid; grid-template-columns: 64px 1fr 40px;
+  gap: 2rem; align-items: start;
+  padding: 2.6rem 0; border-top: 1px solid var(--border);
+  cursor: pointer; position: relative;
+}
+.proj-row:last-of-type { border-bottom: 1px solid var(--border); }
+.proj-row::before {
+  content: ''; position: absolute;
+  left: -2.5rem; right: -2.5rem; top: 0; bottom: 0;
+  background: var(--off); opacity: 0; transition: opacity .2s;
+  pointer-events: none;
+}
+.proj-row:hover::before { opacity: 1; }
+.proj-row > * { position: relative; }
+.proj-num {
+  font-size: .7rem; font-weight: 800; letter-spacing: .1em;
+  color: var(--mid); padding-top: 5px;
+}
+.proj-body h3 {
+  font-size: 1.4rem; font-weight: 800; letter-spacing: -.02em;
+  color: var(--black); line-height: 1.2; margin-bottom: .45rem;
+  transition: color .2s;
+}
+.proj-row:hover .proj-body h3 { color: var(--dark); }
+.proj-desc { font-size: .88rem; color: var(--mid); line-height: 1.6; margin-bottom: .8rem; max-width: 540px; }
+.proj-impact {
+  font-size: .82rem; font-weight: 700; color: var(--black);
+  background: var(--tag-bg); border: 1px solid var(--border);
+  border-radius: var(--r); padding: .4rem .85rem; display: inline-block;
+  margin-bottom: .8rem;
+}
+.proj-tags { display: flex; gap: .38rem; flex-wrap: wrap; }
+.p-tag {
+  font-size: .65rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  background: var(--tag-bg); color: var(--tag-txt); padding: .2rem .65rem;
+  border-radius: 100px; border: 1px solid var(--border);
+}
+.proj-arrow {
+  font-size: 1rem; color: var(--border); padding-top: 5px; text-align: right;
+  transition: color .2s, transform .25s;
+}
+.proj-row:hover .proj-arrow { color: var(--black); transform: translate(3px,-3px); }
+.proj-row.open .proj-arrow { transform: rotate(45deg); color: var(--black); }
+
+/* placeholder badge */
+.proj-placeholder {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--mid); border: 1px dashed var(--border); border-radius: 100px;
+  padding: .22rem .7rem; margin-bottom: .6rem;
+}
+
+/* detail expand */
+.proj-detail {
+  padding-left: calc(64px + 2rem);
+  max-height: 0; overflow: hidden;
+  transition: max-height .6s cubic-bezier(.23,1,.32,1);
+}
+.proj-row.open + .proj-detail { max-height: 700px; }
+.detail-wrap {
+  padding: 0 0 2.5rem;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+}
+.d-block {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 1.2rem 1.4rem;
+}
+.d-block h4 {
+  font-size: .6rem; font-weight: 800; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--mid); margin-bottom: .5rem;
+}
+.d-block p { font-size: .86rem; color: #555; line-height: 1.7; }
+.d-link {
+  display: inline-flex; align-items: center; gap: .4rem;
+  margin-top: 1rem; font-size: .8rem; font-weight: 800; color: var(--black);
+  border-bottom: 1.5px solid var(--border); padding-bottom: 2px;
+  transition: border-color .2s;
+}
+.d-link:hover { border-color: var(--black); }
+
+/* ═══════════════════════════════════════════════
+   DASHBOARD PREVIEWS
+═══════════════════════════════════════════════ */
+.dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+.dash-card {
+  border: 1px solid var(--border); border-radius: var(--r-lg);
+  overflow: hidden; cursor: pointer;
+  transition: box-shadow .25s, transform .25s;
+}
+.dash-card:hover { box-shadow: var(--sh-lg); transform: translateY(-4px); }
+.dash-preview {
+  width: 100%; aspect-ratio: 16/9;
+  background: var(--off2); position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+/* CSS chart mockups */
+.mock-bars {
+  display: flex; align-items: flex-end; gap: 6px; height: 72px; padding: 0 20px;
+}
+.mock-bar {
+  flex: 1; border-radius: 3px 3px 0 0; min-width: 14px;
+  background: var(--border); transition: background .2s;
+}
+.dash-card:hover .mock-bar { background: #aaa; }
+.mock-bar.hi { background: var(--black); }
+.dash-card:hover .mock-bar.hi { background: var(--dark); }
+.mock-kpis {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 16px;
+}
+.mock-kpi {
+  background: var(--white); border-radius: 5px; padding: 10px 12px;
+  border: 1px solid var(--border);
+}
+.mock-kpi-n { font-size: .95rem; font-weight: 900; color: var(--black); }
+.mock-kpi-l { font-size: .55rem; font-weight: 700; color: var(--mid); text-transform: uppercase; letter-spacing: .08em; margin-top: 2px; }
+.mock-line {
+  width: 90%; height: 56px; padding: 0 20px; position: relative;
+}
+.mock-line svg { width: 100%; height: 100%; overflow: visible; }
+.dash-placeholder-label {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: .4rem;
+}
+.dash-placeholder-label span {
+  font-size: .65rem; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--mid);
+}
+.dash-upload-hint {
+  font-size: .6rem; color: var(--border); font-weight: 700;
+  border: 1px dashed var(--border); border-radius: 4px; padding: .2rem .5rem;
+}
+.dash-footer { padding: 1rem 1.2rem; border-top: 1px solid var(--border); }
+.dash-footer h4 { font-size: .85rem; font-weight: 800; color: var(--black); margin-bottom: .2rem; }
+.dash-footer p { font-size: .75rem; color: var(--mid); }
+
+/* ═══════════════════════════════════════════════
+   SKILLS
+═══════════════════════════════════════════════ */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.1rem; }
+.sk-group {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 1.4rem 1.5rem;
+  transition: box-shadow .2s, transform .2s;
+}
+.sk-group:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
+.sk-group-name {
+  font-size: .62rem; font-weight: 800; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--mid); margin-bottom: .9rem;
+}
+.sk-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.sk-chip {
+  font-size: .76rem; font-weight: 700;
+  background: var(--tag-bg); color: var(--tag-txt); padding: .28rem .75rem;
+  border-radius: 100px; border: 1px solid var(--border);
+  transition: background .18s, color .18s, border-color .18s;
+}
+.sk-chip:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+
+/* ═══════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════ */
+.about-grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: start; max-width: 860px; }
+
+.about-right { display: flex; flex-direction: column; gap: 1.2rem; }
+.about-right p { font-size: 1rem; line-height: 1.82; color: #444; }
+.about-right p strong { color: var(--black); font-weight: 800; }
+.stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: .8rem; }
+.stat-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 1.1rem 1.3rem;
+  transition: box-shadow .2s, transform .2s;
+}
+.stat-card:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
+.stat-n { font-size: 1.9rem; font-weight: 900; color: var(--black); letter-spacing: -.03em; line-height: 1; }
+.stat-l { font-size: .65rem; font-weight: 800; color: var(--mid); text-transform: uppercase; letter-spacing: .07em; margin-top: .35rem; }
+
+/* ═══════════════════════════════════════════════
+   WRITING
+═══════════════════════════════════════════════ */
+.writing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px,1fr)); gap: 1.1rem; }
+.art-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 1.8rem; cursor: pointer; display: flex; flex-direction: column;
+  transition: box-shadow .25s, transform .25s;
+}
+.art-card:hover { box-shadow: var(--sh-lg); transform: translateY(-4px); }
+.art-cat { font-size: .62rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); margin-bottom: .85rem; }
+.art-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--black); letter-spacing: -.015em; line-height: 1.35; margin-bottom: .65rem; flex: 1; }
+.art-card p { font-size: .83rem; color: #666; line-height: 1.65; }
+.art-meta {
+  display: flex; justify-content: space-between;
+  margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--border);
+  font-size: .7rem; font-weight: 800; color: var(--mid);
+}
+
+/* ═══════════════════════════════════════════════
+   EDUCATION
+═══════════════════════════════════════════════ */
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.edu-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 1.7rem;
+  transition: box-shadow .2s, transform .2s;
+}
+.edu-card:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
+.edu-badge {
+  display: inline-block; font-size: .6rem; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; background: var(--tag-bg); color: var(--tag-txt);
+  padding: .22rem .65rem; border-radius: 100px; border: 1px solid var(--border); margin-bottom: .9rem;
+}
+.edu-deg { font-size: 1.05rem; font-weight: 800; color: var(--black); letter-spacing: -.01em; margin-bottom: .25rem; }
+.edu-school { font-size: .85rem; color: var(--mid); font-weight: 700; }
+.edu-sub { font-size: .75rem; color: var(--border); font-weight: 700; margin-top: .3rem; }
+
+/* ═══════════════════════════════════════════════
+   EXPERIENCE / TIMELINE
+═══════════════════════════════════════════════ */
+.exp-list { display: flex; flex-direction: column; gap: 0; }
+.exp-item {
+  display: grid; grid-template-columns: 200px 1fr;
+  gap: 3rem; padding: 2.8rem 0;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+.exp-item:last-of-type { border-bottom: 1px solid var(--border); }
+.exp-left { padding-top: 4px; }
+.exp-company {
+  font-size: .82rem; font-weight: 800; color: var(--black);
+  letter-spacing: -.01em; margin-bottom: .3rem;
+}
+.exp-period {
+  font-size: .7rem; font-weight: 700; color: var(--mid);
+  letter-spacing: .03em; margin-bottom: .5rem;
+}
+.exp-badge {
+  display: inline-block; font-size: .58rem; font-weight: 800;
+  letter-spacing: .1em; text-transform: uppercase;
+  background: var(--tag-bg); color: var(--tag-txt);
+  padding: .2rem .6rem; border-radius: 100px; border: 1px solid var(--border);
+}
+.exp-right { }
+.exp-role { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -.02em; margin-bottom: .6rem; }
+.exp-summary { font-size: .9rem; color: var(--mid); line-height: 1.7; margin-bottom: 1.1rem; max-width: 580px; }
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
+.exp-bullets li {
+  font-size: .87rem; color: #444; line-height: 1.65;
+  padding-left: 1.2rem; position: relative;
+}
+.exp-bullets li::before {
+  content: '→'; position: absolute; left: 0; color: var(--mid);
+  font-size: .75rem; top: 3px;
+}
+.exp-bullets li strong { color: var(--black); font-weight: 800; }
+@media (max-width: 860px) {
+  .exp-item { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+/* ═══════════════════════════════════════════════
+   TIMELINE STRIP
+═══════════════════════════════════════════════ */
+.timeline { display: flex; gap: 0; overflow-x: auto; padding-bottom: .5rem; }
+.tl-item {
+  flex: 1; min-width: 180px; padding: 1.8rem 1.6rem;
+  border-right: 1px solid var(--border); position: relative;
+}
+.tl-item:last-child { border-right: none; }
+.tl-year { font-size: .62rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); margin-bottom: .5rem; }
+.tl-label { font-size: .95rem; font-weight: 800; color: var(--black); letter-spacing: -.01em; margin-bottom: .25rem; line-height: 1.3; }
+.tl-sub { font-size: .78rem; color: var(--mid); line-height: 1.5; }
+.tl-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--black); margin-bottom: .8rem;
+}
+.tl-current .tl-dot { background: var(--green); box-shadow: 0 0 0 3px rgba(34,197,94,.18); }
+
+.resume-band {
+  margin: 0 2.5rem; border-radius: var(--r-lg);
+  background: var(--black); color: var(--white);
+  padding: 2.8rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem;
+}
+.resume-band h3 { font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: .35rem; }
+.resume-band p { font-size: .88rem; color: rgba(255,255,255,.45); }
+.btn-resume {
+  background: var(--white); color: var(--black);
+  padding: .8rem 1.8rem; border-radius: var(--r);
+  font-family: 'Nunito', sans-serif; font-size: .84rem; font-weight: 800;
+  cursor: pointer; border: none; white-space: nowrap; flex-shrink: 0;
+  transition: transform .2s, box-shadow .2s;
+}
+.btn-resume:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,255,255,.18); }
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════ */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4.5rem; align-items: start; }
+.contact-left p { font-size: .95rem; color: var(--mid); line-height: 1.7; margin: 1rem 0 2rem; }
+.c-links { display: flex; flex-direction: column; gap: .65rem; }
+.c-link {
+  display: flex; align-items: center; gap: .85rem;
+  padding: .85rem 1rem; border-radius: var(--r); border: 1px solid var(--border);
+  font-size: .86rem; font-weight: 800; color: var(--black);
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.c-link:hover { border-color: var(--black); box-shadow: var(--sh-md); transform: translateX(4px); }
+.c-icon {
+  width: 30px; height: 30px; background: var(--off); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .82rem; font-weight: 800; flex-shrink: 0;
+}
+.contact-form { display: flex; flex-direction: column; gap: .9rem; }
+.f-row { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+.f-field { display: flex; flex-direction: column; gap: .3rem; }
+.f-field label { font-size: .62rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--mid); }
+.f-field input, .f-field textarea {
+  font-family: 'Nunito', sans-serif; font-size: .88rem; font-weight: 500;
+  background: var(--off); border: 1.5px solid var(--border); border-radius: var(--r);
+  padding: .75rem .95rem; color: var(--black); outline: none; resize: none;
+  transition: border-color .2s, background .2s, box-shadow .2s;
+}
+.f-field input:focus, .f-field textarea:focus {
+  border-color: var(--black); background: var(--white);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.05);
+}
+.f-field input::placeholder, .f-field textarea::placeholder { color: var(--mid); }
+.f-submit {
+  align-self: flex-start; padding: .8rem 1.8rem; border-radius: var(--r);
+  background: var(--black); color: var(--white);
+  font-family: 'Nunito', sans-serif; font-size: .84rem; font-weight: 800;
+  cursor: pointer; border: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.f-submit:hover { transform: translateY(-2px); box-shadow: var(--sh-md); }
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer {
+  padding: 1.8rem 2.5rem; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: .75rem; font-weight: 700; color: var(--mid);
+}
+.f-logo { font-weight: 900; font-size: .95rem; color: var(--black); }
+
+/* ═══════════════════════════════════════════════
+   MODAL (articles)
+═══════════════════════════════════════════════ */
+.overlay {
+  position: fixed; inset: 0; background: rgba(13,12,11,.65);
+  backdrop-filter: blur(8px); z-index: 500;
+  opacity: 0; pointer-events: none; transition: opacity .3s;
+  display: flex; align-items: center; justify-content: center; padding: 2rem;
+}
+.overlay.open { opacity: 1; pointer-events: all; }
+.modal {
+  background: var(--white); border-radius: var(--r-lg);
+  max-width: 640px; width: 100%; max-height: 88vh; overflow-y: auto;
+  padding: 2.8rem; position: relative;
+  transform: translateY(14px); transition: transform .3s;
+  box-shadow: var(--sh-lg);
+}
+.overlay.open .modal { transform: translateY(0); }
+.modal-x {
+  position: absolute; top: 1.4rem; right: 1.4rem;
+  width: 30px; height: 30px; background: var(--off);
+  border: 1px solid var(--border); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .82rem; cursor: pointer;
+  transition: background .18s;
+}
+.modal-x:hover { background: var(--border); }
+.modal-cat { font-size: .6rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: .85rem; }
+.modal h2 { font-size: 1.55rem; font-weight: 900; letter-spacing: -.02em; line-height: 1.25; color: var(--black); margin-bottom: .9rem; }
+.modal-meta { font-size: .72rem; font-weight: 700; color: var(--mid); padding-bottom: 1.4rem; margin-bottom: 1.4rem; border-bottom: 1px solid var(--border); }
+.modal-body p { font-size: .93rem; line-height: 1.82; color: #333; margin-bottom: 1rem; }
+.modal-body h3 { font-size: .95rem; font-weight: 800; color: var(--black); margin: 1.6rem 0 .45rem; }
+
+/* ═══════════════════════════════════════════════
+   REVEAL ANIMATIONS
+═══════════════════════════════════════════════ */
+.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.up { opacity: 1; transform: translateY(0); }
+.d1 { transition-delay: .08s; }
+.d2 { transition-delay: .16s; }
+.d3 { transition-delay: .24s; }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links li:not(:last-child) { display: none; }
+  .section { padding: 4rem 1.5rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+  .edu-grid { grid-template-columns: 1fr; }
+  .think-steps { grid-template-columns: 1fr 1fr; }
+  .think-panel.active { grid-template-columns: 1fr; }
+  .think-panel-left { border-right: none; border-bottom: 1px solid var(--border); }
+  .insights-band { flex-direction: column; gap: 1.5rem; }
+  .insight-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); padding: 0 0 1.5rem; }
+  .insight-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .detail-wrap { grid-template-columns: 1fr; }
+  .proj-detail { padding-left: calc(40px + 1rem); }
+  .proj-row { grid-template-columns: 48px 1fr 32px; gap: 1rem; }
+  .f-row { grid-template-columns: 1fr; }
+  .resume-band { flex-direction: column; align-items: flex-start; margin: 0 1.5rem; }
+  .hero-band, .hero-name-block, .hero-rule, .hero-footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .hero-footer { flex-direction: column; align-items: flex-start; }
+  footer { flex-direction: column; gap: .4rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-logo">Sourabh Akula<sup>DA</sup></div>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#how-i-think">Thinking</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#contact" class="nav-hire">Hire Me</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-band">
+    <span class="hero-band-left">Business Data Analyst · Dallas, TX</span>
+    <span class="hero-status"><span class="status-dot"></span>Open to opportunities</span>
+  </div>
+
+  <div class="hero-name-block">
+    <div style="line-height:.9; margin-bottom:.4rem;">
+      <span class="hero-name">Sourabh</span>
+      <span class="pronun">
+        / s·uh·w·r·uh·bh /
+        <span class="pronun-tip">"suh-wrabh" - like "sub" but with a soft w</span>
+      </span>
+    </div>
+    <div class="hero-name hero-name-dim">Akula</div>
+  </div>
+
+  <div class="hero-rule"></div>
+
+  <div class="hero-footer">
+    <div class="hero-meta">
+      <div class="hero-title">Business Data Analyst</div>
+      <div class="hero-chips">
+        <span class="hero-chip">SQL</span>
+        <span class="hero-chip">Power BI</span>
+        <span class="hero-chip">Python</span>
+        <span class="hero-chip">Data Analysis</span>
+        <span class="hero-chip">Business Intelligence</span>
+      </div>
+      <div class="hero-exp">5 years experience · Open to Relocation</div>
+      <p class="hero-tagline">I work at the intersection of business and data, using SQL, BI dashboards, and statistical analysis to uncover patterns and turn complex datasets into decisions leaders can confidently make.</p>
+    </div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-black">View Projects ↓</a>
+      <!-- ✏️ EDITABLE: Replace href="#" with your actual resume PDF URL -->
+      <a href="#" download="Sourabh_Akula_Resume.pdf" class="btn btn-ghost">Download Resume ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KEY INSIGHTS BAND ══════════════════════════ -->
+<div class="insights-band">
+  <div class="insight-item">
+    <div class="insight-label">Uber Portfolio Risk</div>
+    <div class="insight-stat">45.9%</div>
+    <div class="insight-desc">of Uber's market segments are structurally loss-making. Lyft holds zero vulnerable zones.</div>
+  </div>
+  <div class="insight-item">
+    <div class="insight-label">Market Entry Score</div>
+    <div class="insight-stat">100/100</div>
+    <div class="insight-desc">LaGuardia Airport scored perfect as a new entrant launch zone. JFK scored 78.6.</div>
+  </div>
+  <div class="insight-item">
+    <div class="insight-label">Housing Price Model</div>
+    <div class="insight-stat">R² 0.79</div>
+    <div class="insight-desc">Overall accuracy, but R² drops to -0.08 for affordable homes, reshaping the deployment recommendation entirely</div>
+  </div>
+  <div class="insight-item">
+    <div class="insight-label">Trips Analyzed</div>
+    <div class="insight-stat">98,656</div>
+    <div class="insight-desc">Clean TLC trips across 11 SQL queries and 4 stakeholder Power BI dashboards</div>
+  </div>
+</div>
+
+<!-- ═══ PROJECTS ════════════════════════════════════ -->
+<section class="section" id="projects">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Work</div>
+      <h2 class="s-title">Selected projects</h2>
+    </div>
+    <a href="https://github.com/sourabhakula" target="_blank" class="s-link">All projects on GitHub ↗</a>
+  </div>
+
+  <div class="projects-list">
+
+    <!-- P1 -->
+    <div class="proj-row reveal" onclick="toggleProj(this,'pd1')">
+      <span class="proj-num">01</span>
+      <div class="proj-body">
+        <h3>NYC Ride-Hailing Strategy Analysis</h3>
+        <p class="proj-desc">Profitable growth under congestion constraints, using SQL and Power BI case study analyzing 100K TLC trip records across Uber and Lyft.</p>
+        <div class="proj-impact">📊 Analyzed 100,000 TLC trips · 4 stakeholder dashboards · 12 SQL files</div>
+        <div class="proj-tags">
+          <span class="p-tag">SQL</span><span class="p-tag">Power BI</span>
+          <span class="p-tag">Strategy</span><span class="p-tag">Market Analysis</span>
+        </div>
+      </div>
+      <span class="proj-arrow">↗</span>
+    </div>
+    <div class="proj-detail" id="pd1">
+      <div class="detail-wrap">
+        <div class="d-block"><h4>Business Problem</h4><p>Identify where Uber and Lyft lose margin, determine Lyft's best expansion zones, and score viable entry points for a new competitor entering the NYC market.</p></div>
+        <div class="d-block"><h4>Dataset</h4><p>100,000 TLC trip records for December 2025. HV0003 = Uber, HV0005 = Lyft. Variables include fare, driver pay, wait time, zone, distance, and violation flags.</p></div>
+        <div class="d-block"><h4>Key Insights</h4><p>Uber's top decile generates 49.7% of all platform margin. Lyft's outer-borough strategy shows stronger take-rate consistency (63.4% solid trips vs Uber's 9.5%). LaGuardia scored 100/100 as an entry target.</p></div>
+        <div class="d-block"><h4>Business Implications</h4><p>Uber should audit its mid-fare pricing algorithm. Lyft should defend outer boroughs before expanding. A new entrant should launch LaGuardia first and build a dedicated WAV fleet in the Bronx from day one.</p></div>
+      </div>
+      <a href="https://github.com/sourabhakula/nyc-rideshare-strategy" target="_blank" class="d-link">View on GitHub ↗</a>
+    </div>
+
+    <!-- P2 -->
+    <div class="proj-row reveal d1" onclick="toggleProj(this,'pd2')">
+      <span class="proj-num">02</span>
+      <div class="proj-body">
+        <h3>Housing Price Prediction Model</h3>
+        <p class="proj-desc">Machine learning feasibility study using Linear Regression on 1,460 Ames, Iowa residential transactions with A/B price segmentation analysis.</p>
+        <div class="proj-impact">📈 1,460 transactions · R² 0.79 overall · Critical segmentation finding</div>
+        <div class="proj-tags">
+          <span class="p-tag">Python</span><span class="p-tag">scikit-learn</span>
+          <span class="p-tag">ML</span><span class="p-tag">A/B Testing</span>
+        </div>
+      </div>
+      <span class="proj-arrow">↗</span>
+    </div>
+    <div class="proj-detail" id="pd2">
+      <div class="detail-wrap">
+        <div class="d-block"><h4>Business Problem</h4><p>Build a predictive pricing model that real estate agents can use to estimate sale price from five measurable property features, with clear guidance on where the model is trustworthy.</p></div>
+        <div class="d-block"><h4>Dataset</h4><p>1,460 residential transactions from Ames, Iowa (Kaggle). 81 original features, price range $34,900 to $755,000, median $163,000. Cleaned to 77 features before modeling.</p></div>
+        <div class="d-block"><h4>Key Insights</h4><p>Overall R² = 0.79. But the A/B split reveals R² = 0.66 for high-price homes versus R² = -0.08 for affordable homes. Affordable pricing is driven by location data absent from the dataset.</p></div>
+        <div class="d-block"><h4>Business Implications</h4><p>Deploy model for properties above $163K only. Flag affordable listings for manual review. Version 2 must add school district, crime, and walkability data to close the affordable segment gap.</p></div>
+      </div>
+      <a href="https://github.com/sourabhakula" target="_blank" class="d-link">View on GitHub ↗</a>
+    </div>
+
+    <!-- P3 PLACEHOLDER -->
+    <div class="proj-row reveal d2" onclick="toggleProj(this,'pd3')">
+      <span class="proj-num">03</span>
+      <div class="proj-body">
+        <div class="proj-placeholder">🚧 Coming soon</div>
+        <h3>Disability Insurance Fraud Detection</h3>
+        <p class="proj-desc">SQL-based anomaly detection identifying serial claimers, billing mill patterns, and provider collusion across a multi-table insurance schema.</p>
+        <div class="proj-impact">🔍 SQL anomaly detection · Window functions · Risk scoring</div>
+        <div class="proj-tags">
+          <span class="p-tag">SQL</span><span class="p-tag">Fraud Detection</span>
+          <span class="p-tag">Anomaly Analysis</span><span class="p-tag">Risk Scoring</span>
+        </div>
+      </div>
+      <span class="proj-arrow">↗</span>
+    </div>
+    <div class="proj-detail" id="pd3">
+      <div class="detail-wrap">
+        <div class="d-block"><h4>Business Problem</h4><p>Identify fraudulent disability insurance claims across three pattern types: serial claimers (same provider, spaced claims), billing mills (volume density anomalies), and provider collusion networks.</p></div>
+        <div class="d-block"><h4>Approach</h4><p>Multi-table SQL schema with realistic fraud patterns. Window functions (LAG, PARTITION BY, RANK) for temporal pattern detection. Provider-level aggregation joined to billing benchmarks for density scoring.</p></div>
+        <div class="d-block"><h4>Status</h4><p>Project in development. Full case study with SQL snippets, findings, and a Power BI fraud monitoring dashboard will be published here when complete.</p></div>
+        <div class="d-block"><h4>Relevant Experience</h4><p>Based on 5 years of fraud detection work at Unum, a US disability insurance company. All data in the project is fictional but structurally mirrors real-world insurance claim patterns.</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ════════════════════════════════════ -->
+<section class="section section-alt" id="experience">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Experience</div>
+      <h2 class="s-title">Where I've worked</h2>
+    </div>
+  </div>
+
+  <!-- Timeline strip -->
+  <div class="timeline reveal" style="margin-bottom:3rem; border:1px solid var(--border); border-radius:var(--r-lg); overflow:hidden;">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-label">B.S. Electronics &amp; Communication</div>
+      <div class="tl-sub">Gnitc, Jntuh</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2018 – 2022</div>
+      <div class="tl-label">Data Analyst</div>
+      <div class="tl-sub">Hexaware Technologies</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-label">MS Information Systems</div>
+      <div class="tl-sub">University of North Texas</div>
+    </div>
+    <div class="tl-item tl-current">
+      <div class="tl-dot"></div>
+      <div class="tl-year">2024 – Present</div>
+      <div class="tl-label">Business Data Analyst</div>
+      <div class="tl-sub">Unum · USA</div>
+    </div>
+  </div>
+
+  <div class="exp-list">
+
+    <!-- Unum -->
+    <div class="exp-item reveal">
+      <div class="exp-left">
+        <div class="exp-company">Unum</div>
+        <div class="exp-period">Jun 2024 – Present</div>
+        <span class="exp-badge">Current Role</span>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Business Data Analyst · USA</div>
+        <p class="exp-summary">Building SQL pipelines, Power BI dashboards, and KPI frameworks for a US disability insurance company, helping investigators detect fraud patterns and executives make faster, better-informed decisions.</p>
+        <ul class="exp-bullets">
+          <li>Designed a <strong>5-pillar KPI measurement framework</strong> evaluating 30+ operational rules across 20+ data sources, reducing complaint rates by <strong>22%</strong> and false positives by <strong>18%</strong></li>
+          <li>Engineered modular SQL pipelines and Power BI dashboards that cut reporting turnaround <strong>from 10 days to 48 hours</strong>, delivering real-time visibility to executive and operational leadership</li>
+          <li>Analyzed <strong>500K records</strong> to identify behavioral risk patterns, developing an entity-level scoring framework that reduced manual review volume by <strong>25%</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Hexaware -->
+    <div class="exp-item reveal d1">
+      <div class="exp-left">
+        <div class="exp-company">Hexaware Technologies</div>
+        <div class="exp-period">Jun 2018 – Jul 2022</div>
+        <span class="exp-badge">4 Years</span>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Data Analyst · Hyderabad, India</div>
+        <p class="exp-summary">Built analytics solutions and BI dashboards for retail and e-commerce clients on Snowflake and BigQuery, from customer segmentation models to A/B tested promotions and ETL pipeline design.</p>
+        <ul class="exp-bullets">
+          <li>Analyzed <strong>3M+ retail transactions</strong> using SQL and Python on Snowflake and BigQuery, identifying funnel drop-offs and channel performance gaps that informed a UX redesign increasing conversion by <strong>12%</strong></li>
+          <li>Designed and analyzed <strong>A/B tests</strong> across promotions, pricing, and digital experiences, applying statistical significance testing that improved campaign ROI by <strong>15%</strong></li>
+          <li>Developed and maintained Power BI and Tableau dashboards tracking <strong>50+ standardized KPIs</strong> across marketing, operations, and vendor performance</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ HOW I THINK WITH DATA ══════════════════════ -->
+<section class="section section-alt" id="how-i-think">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Process</div>
+      <h2 class="s-title">How I think with data</h2>
+    </div>
+  </div>
+
+  <div class="think-steps reveal">
+    <div class="think-step active" onclick="selectStep(0)">
+      <div class="think-step-num">Step 01</div>
+      <div class="think-step-label">Problem</div>
+      <div class="think-step-short">What decision needs to be made?</div>
+      <span class="think-step-arrow">→</span>
+    </div>
+    <div class="think-step" onclick="selectStep(1)">
+      <div class="think-step-num">Step 02</div>
+      <div class="think-step-label">Analysis</div>
+      <div class="think-step-short">What does the data actually say?</div>
+      <span class="think-step-arrow">→</span>
+    </div>
+    <div class="think-step" onclick="selectStep(2)">
+      <div class="think-step-num">Step 03</div>
+      <div class="think-step-label">Insight</div>
+      <div class="think-step-short">What is the one thing that matters?</div>
+      <span class="think-step-arrow">→</span>
+    </div>
+    <div class="think-step" onclick="selectStep(3)">
+      <div class="think-step-num">Step 04</div>
+      <div class="think-step-label">Decision</div>
+      <div class="think-step-short">What should the business do next?</div>
+      <span class="think-step-arrow">→</span>
+    </div>
+  </div>
+
+  <!-- panels - one per step -->
+  <div class="think-panel active" id="tp0">
+    <div class="think-panel-left">
+      <h4>The Question</h4>
+      <p>Before touching any data, I ask: what decision is this analysis trying to support? In the NYC project, the question was not "what do the numbers say?" It was "should a new competitor enter this market, and if so, where first?" That framing changed everything, meaning I needed zone-level scoring, not platform averages.</p>
+    </div>
+    <div class="think-panel-right">
+      <h4>Real Example: NYC Project</h4>
+      <p>Initial brief: analyze ride-hailing economics in NYC.</p>
+      <p style="margin-top:.8rem;">Reframed as: <strong>four separate questions for four separate stakeholders</strong>: Uber CEO (margin health), Lyft CEO (expansion readiness), TLC Commissioner (driver compliance), New Entrant (launch viability).</p>
+    </div>
+  </div>
+  <div class="think-panel" id="tp1">
+    <div class="think-panel-left">
+      <h4>The Method</h4>
+      <p>I build the analysis around the decision, not around what the data makes easy to query. That usually means writing SQL that is harder to read but answers a more precise question. Aggregations, window functions, and joins are tools; the goal is always a number a stakeholder can act on.</p>
+    </div>
+    <div class="think-panel-right">
+      <h4>Real Example: SQL Pattern</h4>
+      <p>To find take rate by zone and identify outliers:</p>
+      <code>SELECT
+  pickup_zone,
+  AVG((base_fare - driver_pay)
+      / NULLIF(base_fare,0)) AS take_rate,
+  COUNT(*) AS trips
+FROM trips
+GROUP BY pickup_zone
+ORDER BY take_rate ASC;</code>
+    </div>
+  </div>
+  <div class="think-panel" id="tp2">
+    <div class="think-panel-left">
+      <h4>The Finding</h4>
+      <p>A good insight is not a summary; it is a surprise. The most valuable outputs from my analyses were not the ones that confirmed what stakeholders expected. They were the ones that challenged the framing. The R² of -0.08 for affordable homes in the housing model was more useful than the overall 0.79 because it told stakeholders exactly where not to trust the model.</p>
+    </div>
+    <div class="think-panel-right">
+      <h4>Real Example: Housing Model</h4>
+      <p>Expected finding: the model works well overall.</p>
+      <p style="margin-top:.8rem;">Actual finding: <strong>the model is worse than guessing for 50% of properties</strong>. The insight reshaped the deployment recommendation entirely: from "deploy broadly" to "deploy only above the $163K median."</p>
+    </div>
+  </div>
+  <div class="think-panel" id="tp3">
+    <div class="think-panel-left">
+      <h4>The Output</h4>
+      <p>Analysis that does not end in a recommendation is incomplete. I frame every project around what a business should do differently after seeing the data. This means writing for the person who did not run the SQL: the manager, the executive, the recruiter, not just the person who did.</p>
+    </div>
+    <div class="think-panel-right">
+      <h4>Real Example: Recommendations</h4>
+      <p>NYC project ended with four separate memos, each with a concrete action:</p>
+      <p style="margin-top:.8rem;"><strong>Uber:</strong> audit mid-fare pricing algorithm.<br><strong>Lyft:</strong> exclude Staten Island Late Night from expansion targets.<br><strong>TLC:</strong> investigate Brooklyn compliance patterns.<br><strong>New entrant:</strong> launch LaGuardia first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DASHBOARD PREVIEWS ══════════════════════════ -->
+<section class="section" id="dashboards">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Dashboards</div>
+      <h2 class="s-title">Analytics dashboards</h2>
+    </div>
+  </div>
+  <div class="dash-grid">
+
+    <div class="dash-card reveal">
+      <div class="dash-preview" style="background:#0d0c0b;">
+        <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/Uber%20CEO.png"
+             alt="NYC Ride-Hailing: Uber CEO Dashboard"
+             style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="dash-footer">
+        <h4>NYC Ride-Hailing: Uber CEO View</h4>
+        <p>Platform margin, take rate by decile, TLC violations · Power BI</p>
+      </div>
+    </div>
+
+    <div class="dash-card reveal d1">
+      <div class="dash-preview" style="background:#0d0c0b;">
+        <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/Lyft%20CEO.png"
+             alt="NYC Ride-Hailing: Lyft CEO Dashboard"
+             style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="dash-footer">
+        <h4>NYC Ride-Hailing: Lyft CEO View</h4>
+        <p>Competitive heatmap, price decomposition, zone action matrix · Power BI</p>
+      </div>
+    </div>
+
+    <div class="dash-card reveal d2">
+      <div class="dash-preview" style="background:#0d0c0b;">
+        <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/NYC%20TLC.png"
+             alt="NYC Ride-Hailing: TLC Commissioner Dashboard"
+             style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="dash-footer">
+        <h4>NYC Ride-Hailing: TLC Commissioner View</h4>
+        <p>Enforcement priority, congestion regressivity, violation rate · Power BI</p>
+      </div>
+    </div>
+
+    <div class="dash-card reveal d3">
+      <div class="dash-preview" style="background:#0d0c0b;">
+        <img src="https://raw.githubusercontent.com/sourabhakula/nyc-rideshare-strategy/main/dashboard/New%20Entrant.png"
+             alt="NYC Ride-Hailing: New Market Entrant Dashboard"
+             style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="dash-footer">
+        <h4>NYC Ride-Hailing: New Entrant View</h4>
+        <p>Opportunity score matrix, WAV gap, airport paradox · Power BI</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ ABOUT ════════════════════════════════════════ -->
+<section class="section section-alt" id="about">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">About</div>
+      <h2 class="s-title">The person behind the data</h2>
+    </div>
+  </div>
+  <div class="about-grid">
+    <div class="about-right">
+      <p class="reveal d1">I'm a <strong>Business Data Analyst with 5 years of experience</strong> working across fraud detection, business intelligence, and operational analytics. At Unum, a US disability insurance company, I build SQL-driven analysis pipelines and Power BI dashboards that help fraud investigators identify patterns and leaders respond faster, cutting reporting turnaround from 10 days to 48 hours.</p>
+      <p class="reveal d2">My approach is straightforward: start with the decision the business needs to make, then work backward to the data. That mindset has helped me deliver end-to-end analytical workflows covering requirements gathering through SQL, modeling, dashboard development, and executive presentation at both Hexaware and Unum.</p>
+      <p class="reveal d3">I hold an <strong>MS in Information Systems from the University of North Texas</strong> and I'm actively exploring mid-level Data Analyst, BI Analyst, and Business Analytics roles at data-driven companies where analytical thinking is a competitive advantage, not just a support function. Based in Dallas, TX, open to on-site, hybrid, remote, and relocation.</p>
+      <div class="stat-row reveal">
+        <div class="stat-card"><div class="stat-n">5</div><div class="stat-l">Years Experience</div></div>
+        <div class="stat-card"><div class="stat-n">MS</div><div class="stat-l">Information Systems · UNT</div></div>
+        <div class="stat-card"><div class="stat-n">BS</div><div class="stat-l">Electronics &amp; Comm · JNTUH</div></div>
+      </div>
+      <p class="reveal" style="text-align:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border); font-size:.92rem; color:var(--mid); line-height:1.75;"><em>"It is not enough to have a good mind; the main thing is to use it well." - René Descartes</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ════════════════════════════════════════ -->
+<section class="section" id="skills">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Skills</div>
+      <h2 class="s-title">What I work with</h2>
+    </div>
+  </div>
+  <div class="skills-grid">
+    <div class="sk-group reveal">
+      <div class="sk-group-name">Data Analysis & Programming</div>
+      <div class="sk-chips">
+        <span class="sk-chip">SQL</span><span class="sk-chip">Python</span>
+        <span class="sk-chip">R</span><span class="sk-chip">Pandas</span>
+        <span class="sk-chip">EDA</span><span class="sk-chip">Statistical Analysis</span>
+        <span class="sk-chip">Cohort Analysis</span><span class="sk-chip">Segmentation</span>
+      </div>
+    </div>
+    <div class="sk-group reveal d1">
+      <div class="sk-group-name">Business Intelligence</div>
+      <div class="sk-chips">
+        <span class="sk-chip">Power BI</span><span class="sk-chip">Tableau</span>
+        <span class="sk-chip">Looker</span><span class="sk-chip">DAX / M</span>
+        <span class="sk-chip">QuickSight</span><span class="sk-chip">KPI Development</span>
+        <span class="sk-chip">Executive Reporting</span>
+      </div>
+    </div>
+    <div class="sk-group reveal d2">
+      <div class="sk-group-name">Cloud & Data Engineering</div>
+      <div class="sk-chips">
+        <span class="sk-chip">Snowflake</span><span class="sk-chip">BigQuery</span>
+        <span class="sk-chip">Databricks</span><span class="sk-chip">dbt</span>
+        <span class="sk-chip">AWS (S3 / Athena / Redshift)</span>
+        <span class="sk-chip">Azure</span><span class="sk-chip">PySpark</span>
+      </div>
+    </div>
+    <div class="sk-group reveal d1">
+      <div class="sk-group-name">Databases</div>
+      <div class="sk-chips">
+        <span class="sk-chip">PostgreSQL</span><span class="sk-chip">MySQL</span>
+        <span class="sk-chip">SQL Server</span><span class="sk-chip">Oracle</span>
+        <span class="sk-chip">ETL / ELT</span><span class="sk-chip">Data Modeling</span>
+        <span class="sk-chip">Semantic Layer</span>
+      </div>
+    </div>
+    <div class="sk-group reveal d2">
+      <div class="sk-group-name">Machine Learning & Stats</div>
+      <div class="sk-chips">
+        <span class="sk-chip">scikit-learn</span><span class="sk-chip">Regression</span>
+        <span class="sk-chip">A/B Testing</span><span class="sk-chip">Feature Engineering</span>
+        <span class="sk-chip">Forecasting</span><span class="sk-chip">Model Evaluation</span>
+        <span class="sk-chip">Anomaly Detection</span>
+      </div>
+    </div>
+    <div class="sk-group reveal d3">
+      <div class="sk-group-name">Analytics & Communication</div>
+      <div class="sk-chips">
+        <span class="sk-chip">Root Cause Analysis</span><span class="sk-chip">Self-Service Analytics</span>
+        <span class="sk-chip">Requirements Gathering</span><span class="sk-chip">Stakeholder Briefs</span>
+        <span class="sk-chip">AI-Assisted Analytics</span><span class="sk-chip">Excel (VBA / Power Query)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WRITING ══════════════════════════════════════════════ -->
+<section class="section section-alt" id="writing">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Writing</div>
+      <h2 class="s-title">Articles &amp; insights</h2>
+    </div>
+  </div>
+  <div class="writing-grid">
+    <div class="art-card reveal" onclick="openM('m1')">
+      <div class="art-cat">AI &middot; Future of Work</div>
+      <h3>Your New Coworker Doesn&#x2019;t Have a Pulse</h3>
+      <p>I was mid-set on a bench press when it hit me. Three LinkedIn posts in a row about companies &#x201C;hiring&#x201D; AI agents. Not people to work with AI. The AI itself. Giving it a role, a title, a spot on the org chart.</p>
+      <div class="art-meta"><span>January 2026</span><span>8 min read</span></div>
+    </div>
+    <div class="art-card reveal d1" onclick="openM('m2')">
+      <div class="art-cat">Technology &middot; Hardware</div>
+      <h3>The Hardware Awakening</h3>
+      <p>Jensen Huang dropped ten trillion dollars into a sentence on stage in Las Vegas. But the thing that made me sit up wasn&#x2019;t the dollar figure. It was the shift in language. He talked about chips, racks, cooling systems. AI leaving the screen and entering the building.</p>
+      <div class="art-meta"><span>February 2026</span><span>7 min read</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EDUCATION ════════════════════════════════════ -->
+<section class="section" id="education">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Education</div>
+      <h2 class="s-title">Academic background</h2>
+    </div>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <span class="edu-badge">Graduate</span>
+      <div class="edu-deg">MS in Information Systems &amp; Technologies</div>
+      <div class="edu-school">University of North Texas</div>
+      <div class="edu-sub">Denton, TX</div>
+    </div>
+    <div class="edu-card reveal d1">
+      <span class="edu-badge">Undergraduate</span>
+      <div class="edu-deg">B.S. Electronics &amp; Communication Engineering</div>
+      <div class="edu-school">Gnitc, Jntuh</div>
+      <div class="edu-sub">Hyderabad, India</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESUME BAND ══════════════════════════════════ -->
+<div class="resume-band reveal" id="resume">
+  <div>
+    <h3>Looking for my resume?</h3>
+    <p>Download a full PDF covering work history, tools, and quantified achievements.</p>
+  </div>
+  <!-- ✏️ EDITABLE: Replace href="#" with your actual resume PDF URL -->
+  <a href="#" download="Sourabh_Akula_Resume.pdf" class="btn-resume">Download Resume (PDF) ↓</a>
+</div>
+
+<!-- ═══ CONTACT ═══════════════════════════════════════ -->
+<section class="section section-alt" id="contact">
+  <div class="s-head reveal">
+    <div>
+      <div class="s-tag">Contact</div>
+      <h2 class="s-title">Let's connect</h2>
+    </div>
+  </div>
+  <div class="contact-grid">
+    <div class="reveal">
+      <p>I'm actively exploring full-time roles in Data Analytics, Business Intelligence, and Business Analytics. Based in Dallas, TX. Open to on-site, hybrid, remote, and relocation.</p>
+      <div class="c-links">
+        <!-- ✏️ EDITABLE: Update email below -->
+        <a href="mailto:akulasourab5@gmail.com" class="c-link">
+          <div class="c-icon">✉</div>akulasourab5@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/sourabhakula" target="_blank" class="c-link">
+          <div class="c-icon" style="font-size:.7rem;">in</div>linkedin.com/in/sourabhakula
+        </a>
+        <!-- ✏️ EDITABLE: Update GitHub handle below -->
+        <a href="https://github.com/sourabhakula" target="_blank" class="c-link">
+          <div class="c-icon">⌥</div>github.com/sourabhakula
+        </a>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <form class="contact-form" onsubmit="submitForm(event)">
+        <div class="f-row">
+          <div class="f-field"><label>Name</label><input type="text" placeholder="Your name" required></div>
+          <div class="f-field"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+        </div>
+        <div class="f-field"><label>Company</label><input type="text" placeholder="Company name"></div>
+        <div class="f-field"><label>Subject</label><input type="text" placeholder="Job opportunity / collaboration"></div>
+        <div class="f-field"><label>Message</label><textarea rows="4" placeholder="Tell me what you're working on..." required></textarea></div>
+        <button type="submit" class="f-submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <div class="f-logo">Sourabh Akula</div>
+  <span>© 2026 · Business Data Analyst · Dallas, TX</span>
+  <span><a href="mailto:akulasourab5@gmail.com">akulasourab5@gmail.com</a></span>
+</footer>
+
+<!-- ═══ ARTICLE MODALS ══════════════════════════════════════════ -->
+<div class="overlay" id="m1" onclick="closeM(event,'m1')">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('m1')">&#x2715;</button>
+    <span class="modal-cat">AI &middot; Future of Work</span>
+    <h2>Your New Coworker Doesn&#x2019;t Have a Pulse</h2>
+    <div class="modal-meta">January 2026 &middot; 8 min read &middot; Sourabh Akula</div>
+    <div class="modal-body">
+      <p><em>The Rise of the Silicon Workforce, and What It Means for the Rest of Us</em></p>
+      <p>I was mid-set on a bench press when it hit me. Not an injury. A thought. I&#x2019;d been scrolling LinkedIn between sets (don&#x2019;t judge me, we all do it), and three posts in a row were about the same thing. Companies &#x201C;hiring&#x201D; AI agents. Not hiring people to work with AI. Hiring the AI itself. Giving it a role, a title, a spot on the org chart.</p>
+      <p>I racked the bar, sat up, and just stared at my phone. Something about reading those posts in a gym, a place built entirely around human effort and discipline and sweat, made the contrast land harder than it probably should have. Machines were getting hired. And here I was, a data analyst with five years of experience, wondering if my resume was ATS-optimized enough.</p>
+      <p>That was October 2025. And over the next two months, every signal I picked up pointed to the same conclusion. AI wasn&#x2019;t a tool in the toolbox anymore. It was sitting at the table.</p>
+      <h3>The Research That Changed How I See This</h3>
+      <p>McKinsey said we&#x2019;re 18 to 24 months from agentic AI reaching full enterprise scale. Harvard Business Review called AI agents &#x201C;a new category of talent&#x201D; and told procurement departments to start treating them the way they treat staffing agencies. PwC argued the traditional pyramid-shaped org chart is dead. In the agentic era, one experienced professional can orchestrate teams of AI agents across an entire workflow. The word they used was &#x201C;generalist.&#x201D; Not specialist.</p>
+      <p>EY ran a survey: 84 percent of employees were eager to use agentic AI. In the same survey, 56 percent were worried about their own job security. Same people. Same breath. I felt that in my bones because I am both of those people.</p>
+      <h3>The Numbers That Made the Fear Feel Rational</h3>
+      <p>Challenger, Gray &amp; Christmas reported that AI was cited as the reason for over 55,000 U.S. job cuts in 2025. Salesforce cut their customer service team from 9,000 to about 5,000 after AI agents started handling half their customer interactions. And then Dario Amodei, the CEO of Anthropic, wrote an essay calling AI a &#x201C;general labor substitute for humans.&#x201D; That&#x2019;s not a fear-monger on Twitter. That&#x2019;s the person building the thing.</p>
+      <p>A CEO from Calix said something I haven&#x2019;t been able to stop thinking about: <strong>&#x201C;80 percent of jobs will change 20 percent. 20 percent of jobs will change 80 percent.&#x201D;</strong> Simple. Brutal. Probably true.</p>
+      <h3>What I Actually Think</h3>
+      <p>As someone who works in fraud detection, the things I do every day, writing SQL queries, building Power BI dashboards, flagging anomalies in claims data, are precisely the kind of multi-step analytical workflows that agentic AI is being trained to do. Some of what I do today will be automated within two years. I&#x2019;m not guessing. I&#x2019;m watching it happen.</p>
+      <p>But here&#x2019;s what I keep coming back to. An AI agent can query a database. It can spot a pattern. It can generate a summary. What it cannot do is sit in a room with a fraud investigator who&#x2019;s been doing this for 20 years and understand why that particular pattern matters in this particular context. That work gets more valuable when the grunt work disappears.</p>
+      <p>I had a moment in November that crystallized things. I used an AI agent to help build a SQL schema for my portfolio. What used to take me a full weekend was done in an evening. My first reaction wasn&#x2019;t excitement. It was a weird, hollow feeling. If I can automate the part of my job I&#x2019;m best known for, what am I actually good at? Eventually I realized: the fact that I could direct the agent to build something meaningful, that I knew what questions to ask, what edge cases mattered, what the output should look like before it was generated, that was the skill. The agent did the typing. I did the thinking.</p>
+      <p>The specialist era is ending. The person who can move from data extraction to insight to stakeholder communication while directing AI agents at each step, that&#x2019;s who&#x2019;s hard to replace. PwC called them generalists. I&#x2019;d call them orchestrators.</p>
+      <p>Your new coworker doesn&#x2019;t have a pulse. Doesn&#x2019;t need coffee. Doesn&#x2019;t have an ego. But it also doesn&#x2019;t have your judgment. Your context. Your ability to walk into a room and make people trust a number. That&#x2019;s still yours. For now, that&#x2019;s enough. But &#x201C;for now&#x201D; has an expiration date. So move.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="m2" onclick="closeM(event,'m2')">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal('m2')">&#x2715;</button>
+    <span class="modal-cat">Technology &middot; Hardware</span>
+    <h2>The Hardware Awakening</h2>
+    <div class="modal-meta">February 2026 &middot; 7 min read &middot; Sourabh Akula</div>
+    <div class="modal-body">
+      <p><em>When Atoms Finally Caught Up With Bits</em></p>
+      <p>I&#x2019;ve been thinking a lot about something Jensen Huang said on stage in Las Vegas at the beginning of January. He was wearing his signature black leather jacket, and he said, almost casually, that ten trillion dollars of computing infrastructure from the last decade is now being modernized. Ten trillion. Like that&#x2019;s a normal number to drop into a sentence.</p>
+      <p>But the thing that actually made me sit up wasn&#x2019;t the dollar figure. It was the shift in language. He didn&#x2019;t talk about software. He didn&#x2019;t talk about models or prompts or chatbots. He talked about chips. Racks. Cooling systems. Physical machines. Jensen Huang stood on stage at CES 2026 and declared that AI was no longer a screen thing. It was becoming a world thing.</p>
+      <h3>What CES 2026 Actually Was</h3>
+      <p>CES 2026 felt different. The buzzword wasn&#x2019;t &#x201C;generative AI.&#x201D; It was &#x201C;Physical AI.&#x201D; Intelligence being embedded into hardware, into robots, into vehicles, into glasses you wear on your face. NVIDIA launched the Rubin platform, basically a completely redesigned system of six chips that work together as one AI supercomputer. It uses four times fewer GPUs to train the same AI model compared to the previous generation, delivers ten times lower cost per token, and can be installed in five minutes. Microsoft, Amazon, Google, and Oracle all committed to deploying it in 2026.</p>
+      <p>The most jaw-dropping announcement came from Verge Motorcycles, a Finnish startup that showed up claiming to ship the world&#x2019;s first production vehicle with solid-state batteries. Not a concept. A motorcycle you can buy for $29,900, with 370 miles of range, charging to 80 percent in about ten minutes, and rated for 100,000 charging cycles. Solid-state batteries have been &#x201C;five years away&#x201D; for about twenty years. And then this tiny company just goes ahead and does it.</p>
+      <h3>The Bigger Picture</h3>
+      <p>Most people are looking at these announcements as individual stories. A new chip here, a battery there, some glasses, a couple of robots. But there&#x2019;s one story underneath all of them. AI is leaving the screen.</p>
+      <p>For the last three years, AI has been a software phenomenon. You type a prompt, you get a response. Everything happens behind glass. December 2025 and January 2026 were the months when that started to change. NVIDIA built the infrastructure to power AI in the physical world. Solid-state batteries are giving machines the energy density to run all day. Smart glasses are putting AI directly in your line of sight. Boston Dynamics brought its new Electric Atlas to CES, production-ready. Caterpillar partnered with NVIDIA to build AI-powered excavators.</p>
+      <h3>What This Means for Data Work</h3>
+      <p>I work in analytics. My entire career is built on the assumption that insights live on screens, in dashboards, in reports that someone opens on a Tuesday morning. But what happens when the screen dissolves? When the dashboard isn&#x2019;t something you pull up on a laptop but something that floats in your peripheral vision while you walk through a warehouse or sit in a meeting?</p>
+      <p>The data doesn&#x2019;t go away. If anything, there&#x2019;s going to be more of it than ever. But the interface layer, the thing between the data and the human, is about to change so dramatically that the people who only know how to build static dashboards will find themselves building for a world that no longer exists.</p>
+      <p>A friend who works in product management said something that stuck: &#x201C;The last ten years of tech were about making software smarter. The next ten are about making the world itself smarter.&#x201D; The atoms are catching up with the bits.</p>
+      <p>A solid-state battery in a motorcycle might not seem like it has anything to do with your Power BI dashboard. But zoom out far enough and it&#x2019;s the same story. The physical world is becoming intelligent. The people who can think across atoms and bits will define the next decade. The hardware woke up. And honestly, it was about time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ JS ══════════════════════════════════════════ -->
+<script>
+// Nav scroll
+window.addEventListener('scroll', () =>
+  document.getElementById('nav').classList.toggle('scrolled', scrollY > 8));
+
+// Reveal
+const ro = new IntersectionObserver(entries =>
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('up'); }), { threshold: .1 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+// Project accordion
+function toggleProj(row, id) {
+  const open = row.classList.contains('open');
+  document.querySelectorAll('.proj-row').forEach(r => r.classList.remove('open'));
+  if (!open) row.classList.add('open');
+}
+
+// Think steps
+function selectStep(i) {
+  document.querySelectorAll('.think-step').forEach((s,idx) =>
+    s.classList.toggle('active', idx === i));
+  document.querySelectorAll('.think-panel').forEach((p,idx) =>
+    p.classList.toggle('active', idx === i));
+}
+
+// Modals
+function openM(id) { document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
+function closeM(e, id) { if (e.target === document.getElementById(id)) closeModal(id); }
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape')
+    document.querySelectorAll('.overlay.open').forEach(o => {
+      o.classList.remove('open');
+      document.body.style.overflow='';
+    });
+});
+
+// Contact form (placeholder - wire up to a backend/Formspree when ready)
+function submitForm(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.f-submit');
+  btn.textContent = 'Sent ✓';
+  btn.style.background = '#22c55e';
+  setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; e.target.reset(); }, 3000);
+}
+</script>
+</body>
+</html>
