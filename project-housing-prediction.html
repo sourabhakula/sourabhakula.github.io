@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Housing Price Prediction Model | Sourabh Akula</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+  <div class="page-transition" id="pageTransition"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">sourabh<span>.</span></a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="work.html" class="nav__link active">Work</a>
+        <a href="experience.html" class="nav__link">Experience</a>
+        <a href="writing.html" class="nav__link">Writing</a>
+        <a href="contact.html" class="nav__cta">Hire Me</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Case Study Hero -->
+  <section class="case-study-hero bg-hero-gradient">
+    <div class="container container--narrow">
+      <a href="work.html" class="back-link reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Work
+      </a>
+      <span class="label reveal reveal-delay-1">Machine Learning &middot; Personal Project</span>
+      <h1 class="reveal reveal-delay-2">Housing Price Prediction Model</h1>
+      <div class="case-study-hero__meta reveal reveal-delay-3">
+        <div class="case-study-hero__meta-item">
+          <span class="label">Role</span>
+          <span>Data Scientist</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Duration</span>
+          <span>2025</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Tools</span>
+          <span>Python, scikit-learn, Pandas</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Domain</span>
+          <span>Real Estate / ML</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Banner -->
+  <section class="section" style="padding-top: 48px; padding-bottom: 48px;">
+    <div class="container container--narrow">
+      <div class="impact-grid reveal">
+        <div class="impact-item">
+          <div class="impact-item__value">1,460</div>
+          <div class="impact-item__desc">Transactions analyzed</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-item__value">R² 0.79</div>
+          <div class="impact-item__desc">Overall accuracy</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-item__value">Critical</div>
+          <div class="impact-item__desc">Segmentation finding</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Problem</span>
+        <h2>Build a model that estimates sale price, and be honest about where it fails</h2>
+        <p>
+          Real estate agents needed a predictive pricing model estimating sale price from
+          measurable property features, with clear guidance on trustworthiness. The dataset was
+          1,460 residential transactions from Ames, Iowa (Kaggle). 81 original features, price
+          range $34,900–$755,000, median $163,000. Cleaned to 77 features before modeling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insight -->
+  <section class="case-study-section bg-warm-gradient">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Insight</span>
+        <h2>R² of 0.79 overall. R² of -0.08 for affordable homes. The model is worse than guessing for half the market.</h2>
+
+        <div class="callout">
+          <div class="callout__label">Key Insight</div>
+          <div class="callout__text">
+            "The model's overall accuracy was hiding a critical failure. R² of -0.08 for affordable
+            homes is more useful than R² of 0.79 overall. It tells stakeholders exactly where
+            not to trust the model."
+          </div>
+        </div>
+
+        <p>
+          An overall R² of 0.79 would normally be considered a success. But an A/B split by
+          price segment told a completely different story. High-price homes: R² = 0.66, decent.
+          Affordable homes (below $163K): R² = -0.08, the model was literally worse than guessing.
+        </p>
+        <p>
+          Affordable pricing is driven by location data (school district, crime rates, walkability)
+          absent from the dataset. The aggregate metric was hiding a critical failure in half the
+          market.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Solution</span>
+        <h2>Deploy selectively. Flag failures. Plan the next version.</h2>
+        <p>
+          Recommended deploying the model ONLY for properties above $163K median. Flag affordable
+          listings for mandatory manual review. Version 2 must add school district, crime, and
+          walkability data to close the affordable segment gap.
+        </p>
+        <p>
+          The most valuable output was not the model itself; it was the deployment boundary.
+          Knowing where the model fails reshaped the entire recommendation from "deploy broadly"
+          to "deploy only above $163K."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="case-study-section bg-warm-gradient">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Impact</span>
+        <h2>Measurable results across the analysis</h2>
+
+        <div class="impact-grid">
+          <div class="impact-item">
+            <div class="impact-item__value">R² 0.79</div>
+            <div class="impact-item__desc">Overall accuracy</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-item__value">R² -0.08</div>
+            <div class="impact-item__desc">Affordable segment</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-item__value">$163K</div>
+            <div class="impact-item__desc">Deployment threshold</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Learned -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <div class="learned-block">
+          <h3>What I Learned</h3>
+          <ul>
+            <li>
+              <strong>Aggregate metrics lie.</strong> R² of 0.79 made the model look production-ready.
+              Segment-level analysis showed it would actively mislead agents for half their listings.
+            </li>
+            <li>
+              <strong>Knowing where a model fails is more valuable than knowing where it works.</strong>
+              The -0.08 R² finding reshaped the entire deployment recommendation from "deploy broadly"
+              to "deploy only above $163K."
+            </li>
+            <li>
+              <strong>Missing data is itself a finding.</strong> The affordable segment failure pointed
+              directly to the features we needed next: location-based data the original dataset lacked.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/sourabhakula/housing-price-prediction" target="_blank" rel="noopener" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Project -->
+  <section class="section" style="padding: 48px 0;">
+    <div class="container container--narrow">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="project-nyc-rideshare.html" class="btn btn--secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          NYC Ride-Hailing
+        </a>
+        <a href="project-olist-pipeline.html" class="btn btn--primary">
+          Next: Olist dbt Pipeline
+          <span class="btn__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">&copy; 2026 &middot; Sourabh Akula &middot; Dallas, TX</div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/sourabhakula/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          <a href="mailto:akulasourab5@gmail.com" class="footer__link">Email</a>
+          <a href="https://github.com/sourabhakula" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

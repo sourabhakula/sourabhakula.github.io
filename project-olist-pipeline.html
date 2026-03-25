@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olist E-Commerce dbt Pipeline | Sourabh Akula</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+  <div class="page-transition" id="pageTransition"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">sourabh<span>.</span></a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="work.html" class="nav__link active">Work</a>
+        <a href="experience.html" class="nav__link">Experience</a>
+        <a href="writing.html" class="nav__link">Writing</a>
+        <a href="contact.html" class="nav__cta">Hire Me</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Case Study Hero -->
+  <section class="case-study-hero bg-hero-gradient">
+    <div class="container container--narrow">
+      <a href="work.html" class="back-link reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Work
+      </a>
+      <span class="label reveal reveal-delay-1">Analytics Engineering &middot; Personal Project</span>
+      <h1 class="reveal reveal-delay-2">Olist E-Commerce dbt Pipeline</h1>
+      <div class="case-study-hero__meta reveal reveal-delay-3">
+        <div class="case-study-hero__meta-item">
+          <span class="label">Role</span>
+          <span>Analytics Engineer</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Duration</span>
+          <span>2025</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Tools</span>
+          <span>dbt, DuckDB, SQL</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Domain</span>
+          <span>E-Commerce / Data Engineering</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Banner -->
+  <section class="section" style="padding-top: 48px; padding-bottom: 48px;">
+    <div class="container container--narrow">
+      <div class="impact-grid reveal">
+        <div class="impact-item">
+          <div class="impact-item__value">11</div>
+          <div class="impact-item__desc">dbt models</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-item__value">17</div>
+          <div class="impact-item__desc">Data tests</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-item__value">Auto</div>
+          <div class="impact-item__desc">Generated lineage docs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Problem</span>
+        <h2>Raw CSVs are not analytics. How do you build a pipeline that is maintainable, tested, and documented?</h2>
+        <p>
+          Working with 100,000+ real Olist (Brazilian e-commerce) transactions across 9 CSV
+          seed files covering orders, customers, sellers, payments, reviews, and product
+          categories. The challenge: transform raw, messy CSVs into clean, tested, documented
+          analytical tables that a BI tool could query reliably.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insight -->
+  <section class="case-study-section bg-warm-gradient">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Insight</span>
+        <h2>dbt's ref() function changes how you think about SQL</h2>
+
+        <div class="callout">
+          <div class="callout__label">Key Insight</div>
+          <div class="callout__text">
+            "The shift from 'writing queries' to 'building data flows' is the difference between
+            ad-hoc analysis and analytics engineering. dbt forces that shift by making dependencies
+            explicit."
+          </div>
+        </div>
+
+        <p>
+          Instead of writing individual queries, you start thinking in data flows. Dependency
+          tracking, automated testing, and self-generating documentation make a pipeline
+          maintainable in a way raw SQL never is. Each model is a node in a graph, not a
+          standalone script.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Solution</span>
+        <h2>A layered dbt pipeline: staging, intermediate, marts</h2>
+        <ul style="margin: 24px 0; padding-left: 0;">
+          <li style="padding: 12px 0; border-bottom: 1px solid var(--border-light); display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-weight: 700; color: var(--accent-warm); font-size: 14px; flex-shrink: 0;">01</span>
+            <div>
+              <strong>Staging layer:</strong> Cleans and types raw CSVs
+            </div>
+          </li>
+          <li style="padding: 12px 0; border-bottom: 1px solid var(--border-light); display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-weight: 700; color: var(--accent-warm); font-size: 14px; flex-shrink: 0;">02</span>
+            <div>
+              <strong>Intermediate layer:</strong> Joins tables and applies business logic
+            </div>
+          </li>
+          <li style="padding: 12px 0; border-bottom: 1px solid var(--border-light); display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-weight: 700; color: var(--accent-warm); font-size: 14px; flex-shrink: 0;">03</span>
+            <div>
+              <strong>Marts layer:</strong> Three final tables ready for BI tools covering order performance, seller performance, and customer behavior
+            </div>
+          </li>
+          <li style="padding: 12px 0; border-bottom: 1px solid var(--border-light); display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-weight: 700; color: var(--accent-warm); font-size: 14px; flex-shrink: 0;">04</span>
+            <div>
+              <strong>17 data tests</strong> covering uniqueness, nulls, and accepted values
+            </div>
+          </li>
+          <li style="padding: 12px 0; display: flex; gap: 16px; align-items: flex-start;">
+            <span style="font-weight: 700; color: var(--accent-warm); font-size: 14px; flex-shrink: 0;">05</span>
+            <div>
+              <strong>dbt docs generate</strong> builds full lineage graph automatically
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="case-study-section bg-warm-gradient">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Impact</span>
+        <h2>Measurable results across the pipeline</h2>
+
+        <div class="impact-grid">
+          <div class="impact-item">
+            <div class="impact-item__value">11</div>
+            <div class="impact-item__desc">dbt models</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-item__value">17</div>
+            <div class="impact-item__desc">Data tests</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-item__value">3</div>
+            <div class="impact-item__desc">Analytical marts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Learned -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <div class="learned-block">
+          <h3>What I Learned</h3>
+          <ul>
+            <li>
+              <strong>Layered architecture prevents spaghetti SQL.</strong> Staging/intermediate/marts
+              separation means each layer has one job. Changes propagate cleanly.
+            </li>
+            <li>
+              <strong>Testing is not optional in data engineering.</strong> 17 tests caught issues that
+              would have silently corrupted downstream dashboards. Tests are cheap insurance.
+            </li>
+            <li>
+              <strong>Documentation that generates itself actually gets maintained.</strong> dbt's
+              auto-generated lineage docs solved the age-old problem of documentation drifting
+              from reality.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/sourabhakula/olist-dbt-pipeline" target="_blank" rel="noopener" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Project -->
+  <section class="section" style="padding: 48px 0;">
+    <div class="container container--narrow">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="project-housing-prediction.html" class="btn btn--secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Housing Prediction
+        </a>
+        <a href="project-fqhc-abtest.html" class="btn btn--primary">
+          Next: FQHC No-Show A/B Test
+          <span class="btn__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">&copy; 2026 &middot; Sourabh Akula &middot; Dallas, TX</div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/sourabhakula/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          <a href="mailto:akulasourab5@gmail.com" class="footer__link">Email</a>
+          <a href="https://github.com/sourabhakula" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

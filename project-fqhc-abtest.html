@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FQHC No-Show A/B Test | Sourabh Akula</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+  <div class="page-transition" id="pageTransition"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">sourabh<span>.</span></a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="work.html" class="nav__link active">Work</a>
+        <a href="experience.html" class="nav__link">Experience</a>
+        <a href="writing.html" class="nav__link">Writing</a>
+        <a href="contact.html" class="nav__cta">Hire Me</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Case Study Hero -->
+  <section class="case-study-hero bg-hero-gradient">
+    <div class="container container--narrow">
+      <a href="work.html" class="back-link reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to Work
+      </a>
+      <span class="label reveal reveal-delay-1">Healthcare Analytics &middot; Personal Project</span>
+      <h1 class="reveal reveal-delay-2">FQHC No-Show A/B Test</h1>
+      <div class="case-study-hero__meta reveal reveal-delay-3">
+        <div class="case-study-hero__meta-item">
+          <span class="label">Role</span>
+          <span>Data Analyst</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Duration</span>
+          <span>2025</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Tools</span>
+          <span>Python, SciPy, Statistical Testing</span>
+        </div>
+        <div class="case-study-hero__meta-item">
+          <span class="label">Domain</span>
+          <span>Healthcare / Experimentation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Banner -->
+  <section class="section" style="padding-top: 48px; padding-bottom: 48px;">
+    <div class="container container--narrow">
+      <div class="impact-grid reveal">
+        <div class="impact-item">
+          <div class="impact-item__value">p=0.04</div>
+          <div class="impact-item__desc">Statistical significance</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-item__value">$61K</div>
+          <div class="impact-item__desc">Annual recovery</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-item__value">2.27pp</div>
+          <div class="impact-item__desc">No-show reduction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Problem</span>
+        <h2>Can a simple second text message reduce clinic no-shows, and is the evidence strong enough to act on?</h2>
+        <p>
+          Working in disability insurance, I noticed claimants missing clinic appointments stayed
+          on claim longer than those who showed up. I wanted to know if a simple second text
+          message could change no-show rates at population level.
+        </p>
+        <p>
+          Modeled a mid-size FQHC (Federally Qualified Health Center) with primary care and
+          behavioral health departments. Control group gets standard 48-hour reminder. Treatment
+          gets that plus same-day 8am text.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insight -->
+  <section class="case-study-section bg-warm-gradient">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Insight</span>
+        <h2>Primary care: significant. Behavioral health: underpowered. Same experiment, two very different conclusions.</h2>
+
+        <div class="callout">
+          <div class="callout__label">Key Insight</div>
+          <div class="callout__text">
+            "Underpowered is not the same as ineffective. The behavioral health result was not
+            'no effect'; it was 'we do not have enough data to tell.' That distinction changes
+            the recommendation entirely."
+          </div>
+        </div>
+
+        <p>
+          The effect size was grounded in a Kaiser Permanente RCT across 76,577 mental health
+          visits, providing real clinical evidence. Primary care showed clear statistical significance
+          (p=0.04). But behavioral health was underpowered by a factor of 25, and the sample was
+          too small to detect the expected effect.
+        </p>
+        <p>
+          This is the difference between "no effect" and "not enough data to tell."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Solution</span>
+        <h2>Deploy primary care. Extend the behavioral health pilot.</h2>
+        <p>
+          Statistical methods: Power analysis, two-proportion z-test, chi-square test, 95%
+          confidence intervals, Cohen's H effect size. No-show rate dropped from 19.32% to
+          17.05% in primary care.
+        </p>
+        <p>
+          Expected annual revenue recovery of $61,000 against intervention cost of $211 in SMS
+          fees. Business impact calculated across worst case, expected, and best case scenarios
+          using CI bounds. Recommendation: deploy in primary care immediately, extend behavioral
+          health pilot with larger sample.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="case-study-section bg-warm-gradient">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">The Impact</span>
+        <h2>Measurable results across the experiment</h2>
+
+        <div class="impact-grid">
+          <div class="impact-item">
+            <div class="impact-item__value">p=0.04</div>
+            <div class="impact-item__desc">Statistical significance</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-item__value">$61K</div>
+            <div class="impact-item__desc">Annual recovery</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-item__value">$211</div>
+            <div class="impact-item__desc">Intervention cost</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Learned -->
+  <section class="case-study-section">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <div class="learned-block">
+          <h3>What I Learned</h3>
+          <ul>
+            <li>
+              <strong>Power analysis before the experiment saves you from misleading conclusions after.</strong>
+              If we had not run power analysis, we might have concluded behavioral health reminders
+              don't work. They might; we just did not have enough data.
+            </li>
+            <li>
+              <strong>Effect size matters more than p-value.</strong> A statistically significant result
+              with tiny effect size is not worth deploying. The 2.27 percentage point reduction was
+              both significant and practically meaningful.
+            </li>
+            <li>
+              <strong>Cost-benefit framing makes statistical results actionable.</strong> $61K recovery
+              vs $211 cost is a ratio any administrator can act on. The statistics justify the
+              decision; the economics justify the investment.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-links">
+          <a href="https://github.com/sourabhakula/fqhc-noshow-ab-test" target="_blank" rel="noopener" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Project -->
+  <section class="section" style="padding: 48px 0;">
+    <div class="container container--narrow">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="project-olist-pipeline.html" class="btn btn--secondary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Olist Pipeline
+        </a>
+        <a href="work.html" class="btn btn--primary">
+          All Projects
+          <span class="btn__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">&copy; 2026 &middot; Sourabh Akula &middot; Dallas, TX</div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/sourabhakula/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          <a href="mailto:akulasourab5@gmail.com" class="footer__link">Email</a>
+          <a href="https://github.com/sourabhakula" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

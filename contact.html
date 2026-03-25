@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Sourabh Akula</title>
+  <meta name="description" content="Get in touch. Exploring Data Analytics, BI, and Business Analytics roles. Based in Dallas, TX.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+  <div class="page-transition" id="pageTransition"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">sourabh<span>.</span></a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="work.html" class="nav__link">Work</a>
+        <a href="experience.html" class="nav__link">Experience</a>
+        <a href="writing.html" class="nav__link">Writing</a>
+        <a href="contact.html" class="nav__cta" style="background: var(--accent-warm); color: white;">Hire Me</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section" style="padding-top: 120px;">
+    <div class="container">
+      <div class="grid-2" style="gap: 64px; align-items: start;">
+
+        <div class="contact-intro reveal">
+          <div class="availability" style="margin-bottom: 32px;">
+            <span class="dot"></span>
+            Open to opportunities
+          </div>
+
+          <h1 style="font-size: 40px;">
+            Let's <span class="accent">connect</span>
+          </h1>
+          <p>
+            I am actively exploring full-time roles in Data Analytics, Business Intelligence,
+            and Business Analytics. Based in Dallas, TX. Open to on-site, hybrid, remote,
+            and relocation.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:akulasourab5@gmail.com" class="contact-link-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+              akulasourab5@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/sourabhakula/" target="_blank" rel="noopener" class="contact-link-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              linkedin.com/in/sourabhakula
+            </a>
+            <a href="https://github.com/sourabhakula" target="_blank" rel="noopener" class="contact-link-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              github.com/sourabhakula
+            </a>
+            <div class="contact-link-item" style="cursor: default;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Dallas, Texas
+            </div>
+          </div>
+
+          <!-- Resume Download -->
+          <div style="margin-top: 32px; padding: 20px; background: var(--accent-soft); border-radius: var(--radius-sm); border: 1px solid rgba(245,158,11,0.15);">
+            <p style="font-size: 14px; color: var(--text-secondary); margin-bottom: 12px; font-family: var(--font-secondary);">
+              Looking for my resume?
+            </p>
+            <a href="Sourabh_Akula_Resume.pdf" target="_blank" rel="noopener" class="btn btn--warm" style="font-size: 13px; padding: 10px 20px;">
+              Download Resume (PDF)
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form reveal reveal-delay-2">
+          <h3 style="margin-bottom: 24px;">Send a message</h3>
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="grid-2" style="gap: 16px;">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Where you work">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="e.g., Data Analyst role, collaboration">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me a bit about what you're looking for..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--warm" style="width: 100%; justify-content: center;">
+              Send Message
+              <span class="btn__arrow">&rarr;</span>
+            </button>
+          </form>
+          <div id="formSuccess" style="display: none; text-align: center; padding: 48px 24px;">
+            <div style="font-size: 40px; margin-bottom: 16px;">&#10003;</div>
+            <h3 style="margin-bottom: 8px; color: #059669;">Message received</h3>
+            <p style="color: var(--text-secondary); font-size: 14px;">
+              Thanks for reaching out. I'll get back to you within 24 hours.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="margin-top: 80px;">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">&copy; 2026 &middot; Sourabh Akula &middot; Business Intelligence &amp; Data Analyst &middot; Dallas, TX</div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/sourabhakula/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/sourabhakula" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+          <a href="mailto:akulasourab5@gmail.com" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

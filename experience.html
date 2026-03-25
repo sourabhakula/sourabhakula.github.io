@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Sourabh Akula</title>
+  <meta name="description" content="Professional journey: fraud analytics, e-commerce, operational intelligence.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+  <div class="page-transition" id="pageTransition"></div>
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">sourabh<span>.</span></a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="work.html" class="nav__link">Work</a>
+        <a href="experience.html" class="nav__link active">Experience</a>
+        <a href="writing.html" class="nav__link">Writing</a>
+        <a href="contact.html" class="nav__cta">Hire Me</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero bg-hero-gradient" style="min-height: auto; padding: 140px 0 80px;">
+    <div class="container">
+      <div class="hero__content" style="max-width: 600px;">
+        <span class="label reveal">Professional Journey</span>
+        <h1 class="reveal reveal-delay-1" style="margin-top: 12px;">
+          Where I've been, <span class="accent">what I've built</span>
+        </h1>
+        <p class="hero__description reveal reveal-delay-2">
+          From analyzing millions of e-commerce transactions to building fraud detection
+          frameworks. Each role taught me something different about how data drives decisions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+
+      <div class="timeline">
+        <!-- Role 1: Unum -->
+        <div class="timeline-item reveal" data-expanded="true">
+          <div class="timeline-item__dot"></div>
+          <div class="timeline-item__header" onclick="toggleTimeline(this)">
+            <div>
+              <div class="timeline-item__role">Data Analyst</div>
+              <div class="timeline-item__company">Unum</div>
+            </div>
+            <div class="timeline-item__date">Jun 2024 – Present</div>
+          </div>
+          <div class="timeline-item__location">USA</div>
+          <p class="body-sm" style="margin-bottom: 16px;">
+            Building SQL pipelines, Power BI dashboards, and KPI frameworks for a US disability
+            insurance company, helping investigators detect fraud patterns and executives make
+            faster, better-informed decisions.
+          </p>
+
+          <div class="timeline-item__toggle open" onclick="toggleTimeline(this)">
+            <span>Key contributions</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+
+          <div class="timeline-item__details open">
+            <ul class="timeline-item__detail-list">
+              <li>
+                Designed a <span class="highlight-mark">KPI framework evaluating 30+ rules across 20+ data sources</span>, automating Power BI scorecards
+                that drove rule retention decisions, reducing complaints by 22% and false positives by 18%.
+              </li>
+              <li>
+                Automated the Monthly Business Review by building SQL pipelines (CTEs, window functions) and Power BI dashboards,
+                cutting reporting turnaround from <span class="highlight-mark">10 days to 48 hours</span> for leadership.
+              </li>
+              <li>
+                Found a gap in legacy suppression logic quietly filtering out <span class="highlight-mark">~$95K/month in valid claims</span>;
+                traced the root cause, built the case, and shipped the fix to production.
+              </li>
+            </ul>
+            <div class="timeline-item__tools">
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">Power BI</span>
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Snowflake</span>
+              <span class="tool-tag">Tableau</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2: Hexaware -->
+        <div class="timeline-item reveal">
+          <div class="timeline-item__dot"></div>
+          <div class="timeline-item__header" onclick="toggleTimeline(this)">
+            <div>
+              <div class="timeline-item__role">Data Analyst</div>
+              <div class="timeline-item__company">Hexaware Technologies</div>
+            </div>
+            <div class="timeline-item__date">Jun 2018 – Jul 2022</div>
+          </div>
+          <div class="timeline-item__location">Hyderabad, India &middot; 4 Years</div>
+          <p class="body-sm" style="margin-bottom: 16px;">
+            Built analytics solutions and BI dashboards for retail and e-commerce clients
+            on Snowflake and BigQuery, from customer segmentation models to A/B tested
+            promotions and ETL pipeline design.
+          </p>
+
+          <div class="timeline-item__toggle" onclick="toggleTimeline(this)">
+            <span>Key contributions</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+
+          <div class="timeline-item__details">
+            <ul class="timeline-item__detail-list">
+              <li>
+                Analyzed <span class="highlight-mark">3M+ retail and e-commerce transactions</span> in SQL and Python to map customer journeys and funnel
+                dropoffs; findings drove a UX overhaul that lifted conversion by 12%.
+              </li>
+              <li>
+                Built segmentation and churn models across <span class="highlight-mark">500K customer profiles</span> that marketing used to target
+                high-risk users, lifting repeat purchases by 10% and reducing churn by 8%.
+              </li>
+              <li>
+                Designed ETL/ELT pipelines on Snowflake processing <span class="highlight-mark">10TB+ of data across 5 teams</span>,
+                improving reporting accuracy by 35% and cutting retrieval time by 40%.
+              </li>
+            </ul>
+            <div class="timeline-item__tools">
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">Tableau</span>
+              <span class="tool-tag">Power BI</span>
+              <span class="tool-tag">Snowflake</span>
+              <span class="tool-tag">BigQuery</span>
+              <span class="tool-tag">R</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section bg-warm-gradient">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header reveal">
+        <span class="label">Education</span>
+        <h2>Academic foundation</h2>
+      </div>
+      <div style="display: grid; gap: 24px;">
+        <div class="education-card reveal reveal-delay-1">
+          <div class="education-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+          </div>
+          <div>
+            <div class="education-card__degree">MS in Information Systems & Technologies</div>
+            <div class="education-card__school">University of North Texas</div>
+            <div class="education-card__location">Denton, TX &middot; 2022 – 2024</div>
+          </div>
+        </div>
+        <div class="education-card reveal reveal-delay-2">
+          <div class="education-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+          </div>
+          <div>
+            <div class="education-card__degree">B.S. Electronics & Communication Engineering</div>
+            <div class="education-card__school">Jawaharlal Nehru Technological University Hyderabad</div>
+            <div class="education-card__location">Hyderabad, India &middot; 2014 – 2018</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header reveal">
+        <span class="label">Technical Skills</span>
+        <h2>Tools I work with</h2>
+        <p>I pick the right tool for the problem, not the one that looks best on a resume.</p>
+      </div>
+      <div class="skills-grid reveal reveal-delay-1">
+        <div class="skill-group">
+          <div class="skill-group__title">Languages & Databases</div>
+          <div class="skill-group__items">
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">R</span>
+            <span class="skill-item">SAS</span>
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">MySQL</span>
+            <span class="skill-item">SQL Server</span>
+            <span class="skill-item">Snowflake</span>
+            <span class="skill-item">BigQuery</span>
+            <span class="skill-item">Oracle</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group__title">Visualization & BI</div>
+          <div class="skill-group__items">
+            <span class="skill-item">Tableau</span>
+            <span class="skill-item">Power BI (DAX, Power Query)</span>
+            <span class="skill-item">Looker</span>
+            <span class="skill-item">Excel (Pivot Tables)</span>
+            <span class="skill-item">QuickSight</span>
+            <span class="skill-item">Alteryx</span>
+            <span class="skill-item">SSRS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group__title">Engineering & Cloud</div>
+          <div class="skill-group__items">
+            <span class="skill-item">ETL/ELT</span>
+            <span class="skill-item">dbt</span>
+            <span class="skill-item">SSIS</span>
+            <span class="skill-item">PySpark</span>
+            <span class="skill-item">Databricks</span>
+            <span class="skill-item">AWS (S3, Athena, Redshift)</span>
+            <span class="skill-item">Azure</span>
+            <span class="skill-item">Airflow</span>
+            <span class="skill-item">Kafka</span>
+            <span class="skill-item">Git</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-grid reveal reveal-delay-2" style="margin-top: 24px;">
+        <div class="skill-group">
+          <div class="skill-group__title">Methods</div>
+          <div class="skill-group__items">
+            <span class="skill-item">A/B Testing</span>
+            <span class="skill-item">Regression</span>
+            <span class="skill-item">Forecasting</span>
+            <span class="skill-item">Predictive Modeling</span>
+            <span class="skill-item">Machine Learning</span>
+            <span class="skill-item">Causal Inference</span>
+            <span class="skill-item">Segmentation</span>
+            <span class="skill-item">Data Modeling</span>
+            <span class="skill-item">Data Warehousing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group__title">Business</div>
+          <div class="skill-group__items">
+            <span class="skill-item">Requirements Gathering</span>
+            <span class="skill-item">KPI Development</span>
+            <span class="skill-item">Stakeholder Management</span>
+            <span class="skill-item">Data Storytelling</span>
+            <span class="skill-item">Process Documentation</span>
+            <span class="skill-item">Agile (JIRA)</span>
+            <span class="skill-item">Data Governance</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group__title">AI & Analytics</div>
+          <div class="skill-group__items">
+            <span class="skill-item">AI-Assisted Analytics</span>
+            <span class="skill-item">Anomaly Detection</span>
+            <span class="skill-item">Root Cause Analysis</span>
+            <span class="skill-item">Self-Service Analytics</span>
+            <span class="skill-item">Executive Reporting</span>
+            <span class="skill-item">Cohort Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-warm-gradient">
+    <div class="container" style="text-align: center;">
+      <div class="reveal">
+        <h2 style="font-family: var(--font-accent); font-weight: 400; font-size: 32px; margin-bottom: 16px;">
+          Interested in working together?
+        </h2>
+        <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 28px;">
+          I'm actively exploring full-time roles in Data Analytics, Business Intelligence,
+          and Business Analytics. Based in Dallas, TX. Open to relocation.
+        </p>
+        <a href="contact.html" class="btn btn--warm">
+          Start a Conversation
+          <span class="btn__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">&copy; 2026 &middot; Sourabh Akula &middot; Dallas, TX</div>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/sourabhakula/" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          <a href="https://github.com/sourabhakula" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+          <a href="mailto:akulasourab5@gmail.com" class="footer__link">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
