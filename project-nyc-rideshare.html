@@ -6,6 +6,19 @@
   <title>NYC Ride-Hailing Strategy Analysis | Sourabh Akula</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+  <style>
+    .dashboard-cards{display:flex;flex-direction:column;gap:var(--sp-5);margin:var(--sp-6) 0}
+    .dashboard-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);text-decoration:none;transition:all var(--duration-fast) ease;overflow:hidden}
+    .dashboard-card:hover{border-color:var(--accent-warm);box-shadow:0 8px 24px rgba(245,158,11,.10);transform:translateY(-3px)}
+    .dashboard-card__thumb{width:100%;height:auto;display:block;border-bottom:1px solid var(--border)}
+    .dashboard-card__info{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-5)}
+    .dashboard-card__accent{width:4px;height:40px;border-radius:2px;flex-shrink:0;background:var(--accent-warm)}
+    .dashboard-card__content{flex:1}
+    .dashboard-card__title{font-size:15px;font-weight:600;color:var(--text-primary);font-family:var(--font-secondary);margin-bottom:3px}
+    .dashboard-card__desc{font-size:12.5px;color:var(--text-secondary);font-family:var(--font-secondary);line-height:1.4}
+    .dashboard-card__arrow{font-size:20px;color:var(--accent-warm);flex-shrink:0;opacity:.5;transition:all var(--duration-fast) ease;margin-left:auto}
+    .dashboard-card:hover .dashboard-card__arrow{opacity:1;transform:translateX(4px)}
+  </style>
 </head>
 <body>
   <div class="page-transition" id="pageTransition"></div>
@@ -178,8 +191,72 @@ ORDER BY take_rate ASC;</code>
     </div>
   </section>
 
-  <!-- Impact -->
+  <!-- Dashboards -->
   <section class="case-study-section bg-warm-gradient">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <span class="label">Dashboards</span>
+        <h2>Four perspectives, four dashboards</h2>
+        <p style="margin-bottom: 8px;">
+          Each dashboard was built for a specific decision-maker, answering a different strategic
+          question with zone-level data from 100K TLC trip records.
+        </p>
+
+        <div class="dashboard-cards">
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-card">
+            <img src="images/dash-uber.jpg" alt="Uber CEO Dashboard Preview" class="dashboard-card__thumb">
+            <div class="dashboard-card__info">
+              <div class="dashboard-card__accent"></div>
+              <div class="dashboard-card__content">
+                <div class="dashboard-card__title">Uber CEO Dashboard</div>
+                <div class="dashboard-card__desc">Margin health by zone, pricing algorithm gaps, concentration risk across top-decile segments</div>
+              </div>
+              <div class="dashboard-card__arrow">&rarr;</div>
+            </div>
+          </a>
+
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-card">
+            <img src="images/dash-lyft.jpg" alt="Lyft CEO Dashboard Preview" class="dashboard-card__thumb">
+            <div class="dashboard-card__info">
+              <div class="dashboard-card__accent"></div>
+              <div class="dashboard-card__content">
+                <div class="dashboard-card__title">Lyft CEO Dashboard</div>
+                <div class="dashboard-card__desc">Outer-borough defense strategy, take-rate consistency, expansion zone scoring</div>
+              </div>
+              <div class="dashboard-card__arrow">&rarr;</div>
+            </div>
+          </a>
+
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-card">
+            <img src="images/dash-tlc.jpg" alt="TLC Commissioner Dashboard Preview" class="dashboard-card__thumb">
+            <div class="dashboard-card__info">
+              <div class="dashboard-card__accent"></div>
+              <div class="dashboard-card__content">
+                <div class="dashboard-card__title">TLC Commissioner Dashboard</div>
+                <div class="dashboard-card__desc">Driver compliance patterns, Brooklyn violation clusters, regulatory enforcement gaps</div>
+              </div>
+              <div class="dashboard-card__arrow">&rarr;</div>
+            </div>
+          </a>
+
+          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-card">
+            <img src="images/dash-entrant.jpg" alt="New Entrant Dashboard Preview" class="dashboard-card__thumb">
+            <div class="dashboard-card__info">
+              <div class="dashboard-card__accent"></div>
+              <div class="dashboard-card__content">
+                <div class="dashboard-card__title">New Entrant Dashboard</div>
+                <div class="dashboard-card__desc">Market entry scoring (LaGuardia: 100/100), launch zone economics, WAV fleet opportunity</div>
+              </div>
+              <div class="dashboard-card__arrow">&rarr;</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact -->
+  <section class="case-study-section">
     <div class="container container--narrow">
       <div class="reveal">
         <span class="label">The Impact</span>
@@ -207,26 +284,6 @@ ORDER BY take_rate ASC;</code>
             'analyze ride-hailing economics' into four stakeholder-specific questions produced
             four times the actionable insight."
           </div>
-        </div>
-
-        <h3 style="margin-top: var(--sp-7); margin-bottom: var(--sp-4);">Power BI Dashboards</h3>
-        <div class="dashboard-grid">
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            Uber CEO Dashboard
-          </a>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            Lyft CEO Dashboard
-          </a>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            TLC Commissioner Dashboard
-          </a>
-          <a href="https://app.powerbi.com/view?r=eyJrIjoiNDcwOTRmOTItOTE5Ni00ZTUxLWFlOGMtNGIwYjVlZTIwNjRiIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9" target="_blank" rel="noopener" class="dashboard-link">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-            New Entrant Dashboard
-          </a>
         </div>
       </div>
     </div>
